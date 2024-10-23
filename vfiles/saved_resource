@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+
+    <link rel="icon" href="/Outside_favicon/63969ec4-c079-4d05-8558-b0f34337ac9b_MF.png" type="image/x-icon" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="/MainFrontDesign/css/fonticons.css">
+    <link rel="stylesheet" href="/MainFrontDesign/fonts/stylesheet.css">
+    <link rel="stylesheet" href="/MainFrontDesign/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/MainFrontDesign/css/jquery.fancybox.css">
+    <link rel="stylesheet" href="/MainFrontDesign/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/MainFrontDesign/css/magnific-popup.css">
+    <link rel="stylesheet" href="/MainFrontDesign/css/plugins.css" />
+    <link rel="stylesheet" href="/MainFrontDesign/css/style.css">
+    <link rel="stylesheet" href="/MainFrontDesign/css/responsive.css" />
+    <link href="/CSS/model.css" rel="stylesheet" />
+    <link href="/MainFrontDesign/css/slick.css" rel="stylesheet" />
+    
+
+    <link href="/MainFrontDesign/css/Custom-style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Roboto:300,400,500,700&display=swap" rel="stylesheet">
+    <link href="/MainFrontDesign/css/globalallcss.css" rel="stylesheet" />
+    <script src="/MainFrontDesign/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+    <style type="text/css">
+             .for-blink{color:#fff;
+		animation: blink 2s linear infinite;
+        }
+        @keyframes blink{
+        0%{color: #fff;}
+        50%{color: Yellow;}
+        100%{color: red;}
+        }
+        .main_menu_bg .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus
+        {
+          color:Green;
+          padding-bottom:8px;
+
+          border-bottom:2px solid var(--main-bg-lcolor);
+          background:transparent;
+        }
+        .main_menu_bg .navbar-nav>li>a
+        {
+
+        text-transform:uppercase;
+        font-size:0.875rem;
+        color:White;
+        font-family:'robotoblack';
+        }
+        .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus
+        {
+        color:Green;
+        }
+        .popover-content p{
+            color:#000;
+        }
+
+
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".navbar-collapse">
+    
+    
+    <section class="Header-section">
+        <header class="navbar-fixed-top fullbodydycolorbg">
+            <div class="main_menu_bg">
+                <nav class="navbar navbar-default">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <div class="for-mobile-log" style="display:none;"><a href='/Home/Login'>LOGIN / SIGNUP</a></div>
+                                <a class="navbar-brand site-logo" href='/Home/Login'>
+                                    <img src="/Outside_logo/79444dab-571e-4737-99c1-99ffa47ea94d_M.png" class="img-responsive" style="background-color:transparent;padding:2px;" />
+                                    
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="collapse navbar-collapse custom-control-font" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a href='/Home/Index1'>home</a></li>
+                                    <li><a href='#our-app'><span style="background: var(--main-bg-lcolor);padding: 3px 6px;border-radius: 40px;border-left-width: 2px;border-right-width: 2px;padding-top:2px;"><img src="/AdminDesign/images/android-menu.svg" style="width:14px;margin-top:-1px;" />&nbsp;Android</span></a></li>
+                                    <li><a href="#ABOUT">about</a></li>
+                                    <li><a href="#SERVICES">service</a></li>
+                                    
+                                    <li><a href="#WORKS">works</a></li>
+                                    <li><a href="#CARDS">cards</a></li>
+                                    <li><a href="#TRAVEL">travel</a></li>
+                                    
+                                    <li><a href="#WHYCHOOSEUS">why choose us</a></li>
+
+
+                                    
+                                    <li><a href='/Home/Login/singin'><span style="background:#fff;padding: 3px 10px;border-radius: 40px;color:var(--main-bg-lcolor);">LOGIN</span></a></li>
+                                    <li><a href='/Home/Login/singup'><span style="background:#fff;padding: 3px 8px;border-radius: 40px;color:var(--main-bg-rcolor);">SIGN&nbsp;UP</span></a></li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+    </section>
+    
+
+
+    
+
+
+<style>
+    .slick-slide img {
+    width: 100%;
+    margin-top: 5px;
+}
+    .grid-item1 {
+        /*width: 16.67%;*/
+    }
+
+    .portfolio .grid-item1 {
+        position: relative;
+    }
+
+        .portfolio .grid-item1:hover .grid_item_overlay {
+            opacity: 1;
+        }
+
+    .portfolio .grid_item1_overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding-top: 33%;
+        color: #fff;
+        transition: all 0.6s;
+        opacity: 0;
+        background-color: rgba(76, 61, 114, 0.55);
+    }
+
+        .portfolio .grid_item1_overlay p {
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .portfolio .grid_item1_overlay i {
+            margin-bottom: 10px;
+            font-size: 2rem;
+            color: #FFF;
+        }
+
+    img {
+        /*max-width: 100%;*/
+    }
+</style>
+<style type="text/css">
+    .kkkk {
+        transition: transform .2s;
+    }
+
+        .kkkk:hover {
+            -ms-transform: scale(0.8); /* IE 9 */
+            -webkit-transform: scale(0.8); /* Safari 3-8 */
+            transform: scale(0.8);
+            border-radius: 10px;
+        }
+
+    .viewmorebutton {
+        min-width: 125px;
+        height: 35px;
+        margin-top: 6px;
+        font-size: 20px;
+        letter-spacing: 1px;
+        color: white;
+        text-align: center;
+        padding: 0px;
+        font-family: initial;
+        border-color: white;
+    }
+</style>
+<style>
+    .radhe {
+        transition: transform .5s;
+    }
+
+        .radhe:hover {
+            transform: scale(1.1);
+        }
+
+    .radhe1 {
+        transition: transform .9s;
+    }
+
+        .radhe1:hover {
+            transform: scale(1.05);
+        }
+
+    ul {
+        display: block;
+        list-style-type: disc;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 40px;
+    }
+
+    .nav-tabs {
+        border-bottom: 0px solid #ddd;
+    }
+
+    .my-slick .slick-dots {
+        text-align: left;
+    }
+
+        .my-slick .slick-dots li {
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+            .my-slick .slick-dots li button {
+                background: transparent;
+                border: 1px solid var(--main-bg-lcolor);
+                font-size: 15px;
+                width: 20px;
+                height: 20px;
+                line-height: 16px;
+                border-radius: 50%;
+            }
+
+            .my-slick .slick-dots li.slick-active button {
+                background: var(--main-bg-lcolor);
+                color: #fff;
+            }
+
+    .my-slick .slick-arrow {
+        display: none !important;
+    }
+
+  
+</style>
+
+
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,500,600|Open+Sans:300,400,600,700,800|Roboto:300,400,500,700|Sanchez&display=swap" rel="stylesheet">
+<link href="/CSS/dist/css/AdminLTE.css" rel="stylesheet" />
+<link href="/CSS/dist/css/AdminLTE.min.css" rel="stylesheet" />
+
+<link href="/AdminDesign/plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+<link href="/Ckeditor/contents.css" rel="stylesheet" />
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link href="/CSS/Slieder.css" rel="stylesheet" />
+<link href="/CSS/aaaaa.css" rel="stylesheet" />
+<link href="/CSS/StyleSheet1.css" rel="stylesheet" />
+<link href="/CSS/custom-guest.css" rel="stylesheet" />
+<link href="/MainFrontDesign/wow/engine/style.css" rel="stylesheet" />
+<script src="/MainFrontDesign/wow/engine/jquery.js"></script>
+<link href="/Custom-Animation/css/animate.min.css" rel="stylesheet" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+<meta name="viewport" content="width=device-width">
+
+    <div class="first-home-page">
+        <section style="display:none;">
+            <div id="carousel-example-generic_2" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <!--  <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic_2" data-slide-to="0" class="active">
+                </li>
+                <li data-target="#carousel-example-generic_2" data-slide-to="1" class=""></li>
+                <li data-target="#carousel-example-generic_2" data-slide-to="2" class=""></li>
+                <li data-target="#carousel-example-generic_2" data-slide-to="3" class=""></li>
+
+            </ol> -->
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="/images/slider1.png" class="img-responsive" />
+                    </div>
+                    <div class="item ">
+                        <img src="/images/slider2.png" class="img-responsive" />
+                    </div>
+                    <div class="item ">
+                        <img src="/images/slider3.png" class="img-responsive" />
+                    </div>
+                    <div class="item ">
+                        <img src="/images/slider4.png" class="img-responsive" />
+                    </div>
+
+                </div>
+                <a class="left carousel-control" href="#carousel-example-generic_2" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true" style="margin-top:-100%;"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic_2" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="margin-top:-100%;"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+        <section>
+            <div class="my-slick">
+                <div class="item22">
+                    <img src="/images/slider1.png" class="img-responsive" />
+                </div>
+                <div class="item22 ">
+                    <img src="/images/slider2.png" class="img-responsive" />
+                </div>
+                <div class="item22 ">
+                    <img src="/images/slider3.png" class="img-responsive" />
+                </div>
+                <div class="item22 ">
+                    <img src="/images/slider4.png" class="img-responsive" />
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="ABOUT" class="about bounceIn">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="main_about_area sections" style="padding-bottom:35px; padding-top:75px;">
+                        <div class="col-md-12">
+                            <div class="main_about_content">
+                                <div class="row">
+                                    <div class="col-md-12">   <h3 style="text-align:center;margin-bottom:30px;">About Us</h3></div>
+                                    <div class="col-md-5">
+                                        <div class="about-us-image">
+                                            <div class="single_about_left_img text-center wow">
+
+                                                
+                                                <img src="/AdminDesign/images/about-us-top.gif" class="img-responsive" />
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-7 wow fadeInRight" data-wow-duration="700ms">
+                                        <div class="single_about_right_content ">
+
+
+
+                                            <p style="text-align:justify; font-family:sans-serif; font-size:15px; color:#000;line-height:25px;z-index: 4;position: relative;">Our are provide India's largest multi recharge platform. We are work domestic money transfer, international money transfer services, Prepaid & Dth Recharge, Postpaid payments, Electricity bill payments, Gas & insurance payments, Domestic & internationnal Hotel booking, Domestic & internationnal flight booking, Bus booking, New PAN registration & edit, Mini ATM (M-Pos), AEPS services, All type "GIFT-CARD", and largest Ecommerace that offers comprehensive payment services for customer and merchants. We offer mobile payment solutions to over 5000 consumers to make seamless mobile payments from Cards, Bank Accounts and Digital Credit among others. Our investors and partners has been in all over India's. We strive to maintain an open culture where everyone is a hands-on contributor and feels comfortable sharing ideas and opinions. We are doing our best.</p>
+                                            <div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="SERVICES" class="service">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="main_service_area sections text-center" style="margin-top:20px;">
+                            <div class="text-center">
+                                <h2>Our Main Services</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_service_content">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-12 ">
+                            <center>
+                                <div class="ih-item circle effect15 left_to_right">
+                                    <a href="#">
+                                        <div class="img">
+                                            <img src="/images/prepaid.png" alt="img" class="img-responsive" />
+                                        </div>
+                                        <div class="info fullbodydycolorbg">
+                                            <h3>PREPAID & DTH</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <h3>Prepaid & Dth</h3>
+                                <p>We are provide all prepaid and DTH recharge with live response, you feel real speed with US.</p>
+                            </center>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <center>
+                                <div class="ih-item circle effect15 left_to_right">
+                                    <a href="#">
+                                        <div class="img">
+                                            <img src="/images/allutlity.png" alt="img" class="img-responsive" />
+                                        </div>
+                                        <div class="info fullbodydycolorbg">
+                                            <h3>ALL UTILITIES</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <h3>All Utilities</h3>
+                                <p>Postpaid Mobile, Landline, Broadband, Electricity bill with BBPS, Insurance premium, and Water Bill Payment.</p>
+                            </center>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12 ">
+                            <center>
+                                <div class="ih-item circle effect15 left_to_right">
+                                    <a href="#">
+                                        <div class="img">
+                                            <img src="/images/mposdevice.png" alt="img" class="img-responsive" />
+                                        </div>
+                                        <div class="info fullbodydycolorbg">
+                                            <h3>M-POS DEVICE</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <h3>M-POS Device</h3>
+                                <p>M POS (Mobile Point of Sale) 24x7 Fast services with maximum commission.</p>
+                            </center>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4 col-xs-12 ">
+                            <center>
+                                <div class="ih-item circle effect15 left_to_right">
+                                    <a href="#">
+                                        <div class="img">
+                                            <img src="/images/moneytransferouter.png" alt="img" class="img-responsive" />
+                                        </div>
+                                        <div class="info fullbodydycolorbg">
+                                            <h3>MONEY TRANSFER</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <h3>Money Transfer</h3>
+                                <p>We are Provide Money transfer with all Indian Banks with live and high speed transition.</p>
+                            </center>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12 ">
+                            <center>
+                                <div class="ih-item circle effect15 left_to_right">
+                                    <a href="#">
+                                        <div class="img">
+                                            <img src="/images/busouter.png" alt="img" class="img-responsive" />
+                                        </div>
+                                        <div class="info fullbodydycolorbg">
+                                            <h3>BUS & FLIGHT</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <h3>Bus & Flight</h3>
+                                <p>All domestic Bus booking and All domestic & international Flight booking.</p>
+                            </center>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12 ">
+                            <center>
+                                <div class="ih-item circle effect15 left_to_right">
+                                    <a href="#">
+                                        <div class="img">
+                                            <img src="/images/ecommerceouter.png" alt="img" class="img-responsive" />
+                                        </div>
+                                        <div class="info fullbodydycolorbg">
+                                            <h3>E-COMMERCE</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <h3>E-Commerce</h3>
+                                <p>We are provide India largest E commerce market minimum price and maximum standard.</p>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="PRODUCTS" class="portfolio" style="display:none;">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="text-center">
+                            <h2>OUR MAIN PRODUCTS</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="main_portfolio sections">
+                        <div class="main_service_content">
+                            <div class="col-md-4 col-sm-4 col-xs-12 text-center wow bounceInUp" data-wow-duration="1.4s">
+                                <div class="grid1">
+                                    <div class="grid-item1">
+                                        <a href="/images/mobiledthrecharge.png" class="portfolio-img">
+                                            <img src="/images/mobiledthrecharge.png" class="img-responsive radhe1" />
+                                        </a>
+                                    </div>
+                                    <h3>Mobile & DTH Recharge</h3>
+                                    <p>This Portal provide is a leading pre-paid mobile recharge website in INDIA- On  B2B Retailers and users can recharge prepaid mobile online.and  provide makes for a very convenient way to recharge all DTH in INDIA. There are a lot of DTH operators in India who provide superior services to their customers. </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12 text-center wow bounceInUp" data-wow-duration="1.4s">
+                                <div class="grid1">
+                                    <div class="grid-item1">
+                                        <a href="/images/electricityouter.png" class="portfolio-img">
+                                            <img src="/images/electricityouter.png" class="img-responsive radhe1" />
+                                        </a>
+                                    </div>
+                                    <h3>Electricity Bill Payments</h3>
+                                    <p>Electricity is a commodity that has become an integral part of our lives. In this modern age, almost any technology requires electricity to function. This has made electricity bill payments a frequent necessity. Paying electricity bills online usually requires you to physically go to an outlet and stand in long queues to clear the payment. </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12 text-center wow bounceInUp" data-wow-duration="1.4s">
+                                <div class="grid1">
+                                    <div class="grid-item1">
+                                        <a href="/images/waterouter.png" class="portfolio-img">
+                                            <img src="/images/waterouter.png" class="img-responsive radhe1" />
+                                        </a>
+                                    </div>
+                                    <h3>WATER BILL PAYMENTS</h3>
+                                    <p>Water is the necessity of life and it is very important to pay water bill before the due date. In this busy scenario, everybody is too busy to queue up for water bill payment at the centers. To get rid of this hassle, I am provide presents online water bill payment service.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_portfolio sections">
+                        <div class="main_service_content">
+                            <div class="col-md-4 col-sm-4 col-xs-12 text-center wow bounceInUp" data-wow-duration="1.4s">
+                                <div class="grid1">
+                                    <div class="grid-item1">
+                                        <a href="/images/hotelouter.png" class="portfolio-img">
+                                            <img src="/images/hotelouter.png" class="img-responsive radhe1" />
+                                        </a>
+                                    </div>
+                                    <h3>HOTEL BOOKING</h3>
+                                    <p>Planning a vacation or business trip, and haven't found a hotel yet? Then use our web portal to find a hotel, which suits you in every way. The best travel site in India, Makemytrip has the largest database of hotels in the country and outside. Our user-friendly website makes online hotel booking an easy task, which can be completed in mere minutes. </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12 text-center wow bounceInUp" data-wow-duration="1.4s">
+                                <div class="grid1">
+                                    <div class="grid-item1">
+                                        <a href="/images/MONEYTRANSEROUTERSITE.png" class="portfolio-img">
+                                            <img src="/images/MONEYTRANSEROUTERSITE.png" class="img-responsive radhe1" />
+                                        </a>
+                                    </div>
+                                    <h3>MONEY TRANSFER</h3>
+                                    <p>The advancement of technology has enabled various financial institutions to provide a high standard of service in all aspect of banking and financial services. While modern technology is helping banks and other businesses to streamline their services, customers are no longer required to visit banks and their branches to carry out a wide range of banking services. </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12 text-center wow bounceInUp" data-wow-duration="1.4s">
+                                <div class="grid1">
+                                    <div class="grid-item1">
+                                        <a href="/images/busbookingouter.png" class="portfolio-img">
+                                            <img src="/images/busbookingouter.png" class="img-responsive radhe1" />
+                                        </a>
+                                    </div>
+                                    <h3>BUS BOOKING</h3>
+                                    <p>This is India's largest online bus ticketing platform, trusted by all over Indians. With a sale of over Bus tickets via web, mobile, and our bus agents, and stands at the top of the game in bus ticketing.and operates on over 8020 routes reputed bus operators. and launched its bus booking services in the year 2018, thus offerings customers all travel options on one platform. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--start Main work div -->
+
+        <section id="WORKS" class="testimonial fullbodydycolorbg" style="border-top:; background: ;">
+            <div class="video_overlay">
+                <div class="container-fluid">
+                    <div class="text-center" style="margin-top:55px;">
+                        <h3 style="color:#fff">OUR MAIN WORKS </h3>
+                        <div class="separator2" style="background-color:#fff; margin:5px auto;"></div>
+                    </div>
+                    <div class="row">
+                        <div class="main_testimonial sections text-center" style="padding-top:0px; padding-bottom: 110px;">
+                            <div class="col-md-12" data-wow-delay="0.2s">
+                                <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                                    <div class="carousel-inner">
+                                        <div class="item active">
+                                            <blockquote>
+                                                <div class="row">
+
+                                                    <div class="col-md-4">
+                                                        <img src="/images/pancard.png" class="img-responsive" style="height:234px; width:386px;" />
+                                                    </div>
+                                                    <div class="col-md-2"></div>
+                                                    <div class="col-md-6">
+                                                        <p style="text-align:justify; font-size:13px; color:#fff;">
+                                                            Our provided Permanent Account Number or PAN, is a means of identifying various taxpayers in the country. PAN is a unique identification number assigned to Indians, mostly to those who pay tax. The PAN system of identification is a computer-based system that assigns unique identification number to every Indian tax paying entity. Through this method, all tax related information for a person is recorded against a single PAN number which acts as the primary key for storage of information. This is shared across the country and hence no two people on tax paying entities can have the same PAN.
+                                                            The idea behind PAN is similar to the Social Security Number or SSN used in the United States. SSN in the US is a unique nine-digit number issued to all citizens of the US, permanent and temporary both. Although, the primary aim for SSN creation was to track individuals for social security purposes, it has now become a primary identification number for taxation processes.
+
+                                                            Any PAN issued is valid for the entire lifetime of the PAN holder. This is so majorly because PAN is unaffected by any change of address of the PAN cardholder.
+                                                        </p>
+                                                    </div>
+
+                                                </div>
+                                            </blockquote>
+                                        </div>
+                                        <div class="item">
+                                            <blockquote>
+                                                <div class="row">
+
+                                                    <div class="col-md-4">
+                                                        <img src="/images/slider1.png" class="img-responsive" style="height:234px; width:386px;" />
+                                                    </div>
+                                                    <div class="col-md-2"></div>
+                                                    <div class="col-md-6">
+                                                        <p style="text-align:justify; font-size:13px; color:#fff;">
+                                                            Our provided Permanent Account Number or PAN, is a means of identifying various taxpayers in the country. PAN is a unique identification number assigned to Indians, mostly to those who pay tax. The PAN system of identification is a computer-based system that assigns unique identification number to every Indian tax paying entity. Through this method, all tax related information for a person is recorded against a single PAN number which acts as the primary key for storage of information. This is shared across the country and hence no two people on tax paying entities can have the same PAN.
+
+                                                        </p>
+                                                    </div>
+
+                                                </div>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                    <a data-slide="prev" href="#quote-carousel" class="left carousel-control" style="left:-8%; margin-top:-18%;"><i class="fa fa-chevron-circle-left"></i></a>
+                                    <a data-slide="next" href="#quote-carousel" class="right carousel-control" style="right:-5%;margin-top:-18%;"><i class="fa fa-chevron-circle-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="CARDS" class="testimonial">
+            <div class="container-fluid">
+
+                <div class="row ">
+                    <div class="col-xs-12 text-center">
+                        <h2>Digital Gift Cards</h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="carousel slide gift-card-slide " data-ride="carousel" id="quote-carousel">
+                            <h3>Ecommerece & Online</h3>
+
+                            <div class="item active">
+                                <img src="/ashok-images/internet.svg" class="img-responsive" />
+                            </div>
+
+
+
+                            <div class="gift-card-bottom">
+                                <p style="float:left;">Upto 45% Off*</p>
+
+                                <a href="/Home/Login" style="float:right;">Buy Now</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="carousel slide gift-card-slide " data-ride="carousel" id="quote-carousel">
+                            <h3>Entertainment</h3>
+                            <div class="item active">
+                                <img src="/ashok-images/video.svg" class="img-responsive" />
+                            </div>
+                            <div class="gift-card-bottom">
+                                <p style="float:left;">Upto 45% Off*</p>
+
+                                <a href="/Home/Login" style="float:right;">Buy Now</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+
+                        <div class="carousel slide gift-card-slide " data-ride="carousel" id="quote-carousel">
+                            <h3>Grocery & Homeneeds</h3>
+                            <div class="item active">
+                                <img src="/ashok-images/supermarket.svg" class="img-responsive" />
+                            </div>
+                            <div class="gift-card-bottom">
+                                <p style="float:left;">Upto 45% Off*</p>
+
+                                <a href="/Home/Login" style="float:right;">Buy Now</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+
+                        <div class="carousel slide gift-card-slide " data-ride="carousel" id="quote-carousel">
+                            <h3>Health & Hospitality</h3>
+                            <div class="item active">
+                                <img src="/ashok-images/ayurvedic.svg" class="img-responsive" />
+                            </div>
+                            <div class="gift-card-bottom">
+                                <p style="float:left;">Upto 45% Off*</p>
+
+                                <a href="/Home/Login" style="float:right;">Buy Now</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div><!--.row-->
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="carousel slide gift-card-slide " data-ride="carousel" id="quote-carousel">
+                            <h3>Fashion & Lifestyle</h3>
+                            <div class="item active">
+                                <img src="/ashok-images/fashion-designer.svg" class="img-responsive" />
+                            </div>
+                            <div class="gift-card-bottom">
+                                <p style="float:left;">Upto 45% Off*</p>
+
+                                <a href="/Home/Login" style="float:right;">Buy Now</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="carousel slide gift-card-slide " data-ride="carousel" id="quote-carousel">
+                            <h3>Sportswear & Footwear</h3>
+                            <div class="item active">
+                                <img src="/ashok-images/sneakers.svg" class="img-responsive" />
+                            </div>
+                            <div class="gift-card-bottom">
+                                <p style="float:left;">Upto 45% Off*</p>
+
+                                <a href="/Home/Login" style="float:right;">Buy Now</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+
+                        <div class="carousel slide gift-card-slide " data-ride="carousel" id="quote-carousel">
+                            <h3>Electronics</h3>
+                            <div class="item active">
+                                <img src="/ashok-images/home-theater.svg" class="img-responsive" />
+                            </div>
+                            <div class="gift-card-bottom">
+                                <p style="float:left;">Upto 45% Off*</p>
+
+                                <a href="/Home/Login" style="float:right;">Buy Now</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+
+                        <div class="carousel slide gift-card-slide " data-ride="carousel" id="quote-carousel">
+                            <h3>Travel & Restaurants</h3>
+                            <div class="item active">
+                                <img src="/ashok-images/plane(1).svg" class="img-responsive" />
+                            </div>
+                            <div class="gift-card-bottom">
+                                <p style="float:left;">Upto 45% Off*</p>
+
+                                <a href="/Home/Login" style="float:right;">Buy Now</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div><!--.container-fluid-->
+        </section>
+
+
+
+
+        <section id="TRAVEL" class="about travel-about">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="main_about_area sections">
+                        <div class="col-md-12">
+                            <div class="main_about_content">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="text-center">
+                                            <h2>Travel & Hotel Services</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="travel-border">
+                                        <div class="col-md-6 col-xs-12 wow bounceInLeft" data-wow-duration="1.4s" style="width:40%;">
+                                            <div class="travel-service-image fullbodydycolorbg">
+                                                <div class="single_about_left_img wow fadeInLeft" data-wow-duration=".6s">
+                                                    <img src="/images/bussbooking.png" class="img-responsive " />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 col-xs-12" style="width:60%;">
+                                            <div class="single_about_right_content">
+                                                <p>This  is India's largest online bus ticketing platform, trusted by all over Indians. With a sale of over Bus tickets via web, mobile, and our bus agents, and  stands at the top of the game in bus ticketing.and operates on over 8020 routes reputed bus operators. and launched its bus booking services in the year 2018, thus offerings customers all travel options on one platform. It became the true one-stop travel planner as everything from flights,holiday packages, train reservations, car rentals, to , all things related to travel was now available on this portal  Bus services are available across the length and breadth of India, and this portal realizing the importance of this market has tied up with India’s premier bus services around the country and has been able to quickly gain a significant foothold in this market. It is still at a nascent stage however, and is working towards building many more partnerships to expand its reach and offer an even wider range of options to customers..</p>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="travel-border-flight">
+                                        <div class="col-md-6 col-xs-12  " style="width:60%;">
+                                            <div class="single_about_right_content">
+                                                <p>
+                                                    The leading player in online flight bookings in India.this portal offers great offers, some of the lowest airfares, exclusive discounts and a seamless online booking experience. Flight bookings through the desktop or mobile site is a delightfully customer friendly experience, and with just a few clicks you can complete your booking. With features like Instant Discounts, Fare Calendar, MyRewards Program, MyWallet and many more, the overall booking experience with  constantly adds value to its product and continues to offer the best to its customers.
+                                                    While booking flights with This portal, you can expect the ultimate online booking experience. With premium customer service, 24/7 dedicated helpline for support, and over 99% delighted customers, This portal takes great pride in enabling customer satisfaction. With a cheapest flight guarantee, book your tickets at the lowest airfares. Avail great offers, exclusive deals for loyal customers and get instant updates for your flight status and fare drops.
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6 col-xs-12 wow  fadeInRight" data-wow-duration="700ms" style="width:40%;">
+                                            <div class="travel-service-image fullbodydycolorbg pull-right">
+                                                <div class="single_about_left_img wow fadeInLeft" data-wow-duration=".6s">
+
+                                                    <img src="/images/flighterouter.png" class="img-responsive" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br />
+                                <div class="row">
+                                    <div class="travel-border">
+                                        <div class="col-md-6 col-xs-12" style="width:40%;">
+                                            <div class="travel-service-image fullbodydycolorbg">
+                                                <div class="single_about_left_img wow fadeInLeft" data-wow-duration=".6s">
+                                                    <img src="/images/hoteelouter1.png" class="img-responsive" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-xs-12" style="width:60%;">
+                                            <div class="single_about_right_content">
+                                                <p>
+                                                    The most important aspect for any holiday plan is the part where you have to choose a nice hotel that suits your budget. Staying in a good hotel makes your holiday convenient and more memorable. Therefore, we bring to you mind-blowing hotel offers and an array of hotel deals on domestic as well as international hotels, so that you can enjoy luxury like never before.
+                                                    We have all sorts of hotels, ranging from luxury to cheap, so whatever be your requirement, you will get the accommodation. When you find the hotel of your choice, just click on its name to see its detailed description. Apart from Goa, our database includes myriad properties in all holiday and business destinations in India. Our payment gateway is totally secure, so all your bank details are safe. A smooth transfer process means that making payment is as swift as searching the hotel. So, whether you are looking for budget or upscale hotels in Delhi, Shimla, Mumbai, Chennai or any other destination, visit This Portal, and get the best deal.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="WHYCHOOSEUS" class="about">
+            <div class="container-fluid">
+                <div class="main_team sections text-center">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <div class="text-center">
+                                <h3>Why Choose </h3>
+                                <div class="separator2" style="margin:5px auto; "></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p style="font-family: 'Roboto', sans-serif; font-size:16px; text-align:center; color:black;line-height:24px;">
+                                This   Portal is a best Multi Recharge Company In India, and provide the multi  services with single plateform and support the all client's.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="why-choose-border">
+                                <div class="text-center">
+
+                                    <img src="/images/MULTIRECHARGESERVICE.png" class="img-responsive radhe1" alt="" />
+                                    <h4>MULTI SERVICE WITH SINGLE PLATEFORM</h4>
+                                    <br />
+                                    <p style="color:black;text-align:justify;">Our Multi-Services Platform is a flexible, high-density media resource platform with integrated signalling capabilities, which is designed to enable developers to bring new services to market quickly and cost-effectively.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="why-choose-border">
+                                <div class="text-center">
+
+                                    <img src="/images/Support.png" class="img-responsive radhe1" alt="" />
+                                    <h4>SUPPORT SERVICE</h4>
+                                    <br />
+                                    <p style="color:black;text-align:justify;">We are providing the best supporting service in India. Customer service and support departments interact with consumers as they need assistance. Learn about the differences between service and support and see how they work.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="why-choose-border">
+                                <div class="text-center">
+
+                                    <img src="/images/Team.png" class="img-responsive radhe1" alt="" />
+                                    <h4>TEAM</h4>
+                                    <br />
+                                    <p style="color:black;text-align:justify;">Our team is easily accessible to all our customers. We value all our customers and strive to ensure that our products are working optimally. and provides all its customers a range of targeted and specialized support and technical services.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="why-choose-border">
+                                <div class="text-center">
+
+                                    <img src="/images/Ecommerceouterthem.png" class="img-responsive radhe1" alt="" />
+                                    <h4>E-COMMERCE</h4>
+                                    <br />
+                                    <p style="color:black; text-align:justify;">Looking for a top-class e-commerce development company? Get custom e-commerce development services and robust website designing solutions at competitive prices. Our dedicated web developers are known for delivering ultimate service!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--End WhyChoose-->
+        }
+
+            <input type="button" value="login" id="btn111" data-toggle="modal" data-target="#desktoppopup-modal" style="display:none;">
+            <div class="modal fade" id="desktoppopup-modal" role="dialog">
+                <div class="modal-dialog modal-lg" style="margin-top:85px;">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <p class="modal-title" style="font-size:20px;color:#000000a6;text-align:center;"></p>
+                        </div>
+                        <div class="modal-body">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        
+
+        <section id="our-app" class="about bounceIn ">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="app-design-first">
+                            <div class="app-design-first-before">
+
+                            </div>
+                            <div class="app-design-first-after">
+
+                            </div>
+                            <span> Download Our App</span>
+                        </div>
+                        <div class="app-design-second">
+                            <p>To download the Android application directly from the website, the download button is given below, to download the application, open the website in the Android device.</p>
+                                <a class="fullbodydycolorbg">App Link Not Available</a>
+
+
+                            <a href="javascript:void(0);" onclick="myFunction()" onmouseout="outFunc()" class="fullbodydycolorbg" style="margin:0px 10px;">Copy Download Link</a>
+
+
+                            <a href="#" style="background:var(--main-bg-rcolor);">Download Play Store Link</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="app-design-image">
+                            <div class="app-design-third">
+                            </div>
+                            <div class="app-design-image-first fullbodydycolorbg">
+                                <div class="app-design-image-top">
+                                    <a href="#">
+                                        <img src="/AdminDesign/images/android.svg" style="margin-top:45px;" />
+                                    </a>
+                                </div>
+                                <div class="app-design-image-button">
+
+
+
+
+
+
+
+                                    
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+<script src="/Custom-Animation/js/jquery.min.js"></script>
+<script src="/Custom-Animation/js/wow.min.js"></script>
+<script src="/Custom-Animation/js/main.js"></script>
+
+
+
+
+
+
+<script>
+    function myFunction() {
+        var copyText = document.getElementById("txthdlink");
+        copyText.select();
+        copyText.setSelectionRange(0, 99999);
+        document.execCommand("copy");
+
+        var tooltip = document.getElementById("myTooltip");
+        tooltip.innerHTML = "Copied: " + copyText.value;
+    }
+
+    function outFunc() {
+        var tooltip = document.getElementById("myTooltip");
+        tooltip.innerHTML = "Copy to clipboard";
+    }
+</script>
+
+
+
+<script>
+$(document).ready(function () {
+var sil1 = '';
+if (sil1 == "Y") {
+document.getElementById("silder1").style.display = "block";
+document.getElementById("silder2").style.display = "none";
+}
+else {
+document.getElementById("silder1").style.display = "none";
+document.getElementById("silder2").style.display = "block";
+}
+var succ = '';
+if (succ != null && succ != "") {
+if (succ.includes("Successfully")) {
+swal("Good job!", succ, "success");
+}
+else {
+swal("Oops!", succ, "error");
+}
+}
+});
+</script>
+<script>
+
+    $("#readmore").click(function () {
+        var collapse_content_selector = $(this).attr('href');
+        var toggle_switch = $(this);
+        $(collapse_content_selector).toggle(function () {
+            if ($(this).css('display') == 'none') {
+                toggle_switch.html('Read More');
+            }
+            else {
+                toggle_switch.html('Read Less');
+            }
+        });
+    });
+</script>
+<script>
+    $("#readmorebus").click(function () {
+        var collapse_content_selector = $(this).attr('href');
+        var toggle_switch = $(this);
+        $(collapse_content_selector).toggle(function () {
+            if ($(this).css('display') == 'none') {
+                toggle_switch.html('View More');
+            }
+            else {
+                toggle_switch.html('View Less');
+            }
+        });
+    });
+</script>
+<script>
+    $("#readmoreflight").click(function () {
+        var collapse_content_selector = $(this).attr('href');
+        var toggle_switch = $(this);
+        $(collapse_content_selector).toggle(function () {
+            if ($(this).css('display') == 'none') {
+                toggle_switch.html('View More');
+            }
+            else {
+                toggle_switch.html('View Less');
+            }
+        });
+    });
+</script>
+<script>
+    $("#readmorehotel").click(function () {
+        var collapse_content_selector = $(this).attr('href');
+        var toggle_switch = $(this);
+        $(collapse_content_selector).toggle(function () {
+            if ($(this).css('display') == 'none') {
+                toggle_switch.html('View More');
+            }
+            else {
+                toggle_switch.html('View Less');
+            }
+        });
+    });
+</script>
+<script>
+    $('button').click(function () {
+        if (this.id == 'viewmore') {
+            $('#allcard').show();
+            $('#silderid').hide();
+            $('#viewless').show();
+            $('#viewmore').hide();
+        }
+        else {
+            $('#allcard').hide();
+            $('#silderid').show();
+            $('#viewless').hide();
+            $('#viewmore').show();
+        }
+    })
+</script>
+
+
+<script>
+    $("#readmorewhy").click(function () {
+        var collapse_content_selector = $(this).attr('href');
+        var toggle_switch = $(this);
+        $(collapse_content_selector).toggle(function () {
+            if ($(this).css('display') == 'none') {
+                toggle_switch.html('Read More');
+            }
+            else {
+                toggle_switch.html('Read Less');
+            }
+        });
+    });
+</script>
+<script>
+    var j = $.noConflict();
+    j(document).ready(function () {
+        j('.my-slick').slick({
+            dots: false,
+            infinite: true,
+            speed: 1200,
+            fade: true,
+            autoplay: true,
+            cssEase: 'linear'
+
+        });
+    });
+
+</script>
+
+
+
+
+    
+    <section id="footer" class="footer_widget bottom-footer fullbodydycolorbg">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-12 custom-control-font">
+                <h3>Location</h3>
+                <div class="for-fotter-b">
+                    <ul class="full-address">
+
+
+
+                        <li class="footer-phone">
+                            <h4 style="font-size:18px;">
+                                <img src="/AdminDesign/images/customer-support.svg" style="width:20px;" />&nbsp;24&nbsp;x&nbsp;7 Customer Care
+                            </h4>
+                            <a href="tel:+91++917600537200" style="letter-spacing: 2px;">
+                                <img src="/AdminDesign/images/india.svg" style="width: 30px;padding: 0px 4px;background: #fff;border-radius: 3px;" />&nbsp;+917600537200
+                            </a>
+                        </li>
+                        <li class="footer-phone">
+                            <h4 style="font-size:18px;margin-top: 10px;">
+                                <img src="/AdminDesign/images/chat-box.svg" style="width:20px;" />&nbsp;24&nbsp;x&nbsp;7 Support Email Id
+                            </h4>
+                            <a href="mailto:maharshi.telecom@gmail.com" style="font-size:20px;">maharshi.telecom@gmail.com</a>
+                        </li>
+                        <li class="footer-phone">
+                            <h4 style="font-size:18px;margin-top: 10px;">
+                                <img src="/AdminDesign/images/address-home.svg" style="width:20px;" />&nbsp; Office Address
+                            </h4>
+                            <p style="font-size:18px;font-weight:600;">1-AGIYOL , TA: HIMATNAGAR   DI:SABARKANTHA STATE : GUJARAT</p>
+                        </li>
+                        <li class="footer-phone">
+                            <h4 style="font-size:18px;margin-top: 10px;">
+                                <img src="/AdminDesign/images/zip.svg" style="width:20px;" />&nbsp; zip Code
+                            </h4>
+                            <p style="font-size:18px;font-weight:600;">383001</p>
+                        </li>
+                        <li class="footer-phone">
+                            <h4 style="font-size:18px;margin-top: 10px;">
+                                <img src="/AdminDesign/images/area-pin.svg" style="width:20px;" />&nbsp; City&nbsp;&&nbsp;State
+                            </h4>
+                            <p style="font-size:18px;font-weight:600;">Gujarat, Sabar Kantha</p>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12 custom-control-font">
+                <h3>News&nbsp;&&nbsp;Updates</h3>
+                <div class="for-fotter-b">
+                    <div class="footer-news">
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                            <div class="">
+                                <div class="item-one-1 active">
+                                </div>
+                                <div class="item-two-2">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="footer-social">
+                            <li><img src="/AdminDesign/images/facebook.svg" /></li>
+
+
+                            <li><img src="/AdminDesign/images/twitter.svg" /></li>
+
+
+                            <li><img src="/AdminDesign/images/instagram-sketched.svg" /></li>
+
+
+                            <li><img src="/AdminDesign/images/linkedin.svg" /></li>
+
+
+                            <li><img src="/AdminDesign/images/pinterest.svg" /></li>
+
+
+                            <li><img src="/AdminDesign/images/youtube.svg" /></li>
+
+
+                            <li><img src="/AdminDesign/images/blogger.svg" /></li>
+
+
+                            <li><img src="/AdminDesign/images/tumblr.svg" /></li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <div class="col-md-3 col-sm-3 col-xs-12 custom-control-font">
+                <h3>Services</h3>
+                <div class="for-fotter-b">
+                    <ul class="footer-service">
+                        <li>
+                            <h5 style="margin-top:5px;">Prepaid</h5>
+                            <ul>
+                                <li>Airtel</li>
+                                <li>Idea</li>
+                                <li>Jio</li>
+                                <li>Vodafone</li>
+                                <li>BSNL</li>
+                                <li>MTNL</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5>DTH</h5>
+                            <ul>
+                                <li>Airtel Dth</li>
+
+                                <li>Dish Tv</li>
+                                <li>Tata Sky</li>
+                                <li>Videocon D2h</li>
+                                <li>Sun Tv</li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <h5>Utilities</h5>
+                            <ul>
+                                <li>Postpaid</li>
+                                <li>Landline</li>
+                                <li>Broadband</li>
+                                <li>Electricity</li>
+                                <li>Gas</li>
+                                <li>Water</li>
+                                <li>Cable Tv</li>
+                                <li>Insurance</li>
+                                <li><span class="for-blink">Fastag</span></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h5>Financial</h5>
+                            <ul>
+                                <li>Money Transfer</li>
+
+                                <li>AEPS</li>
+                                <li>m-Pos&nbsp;(micro ATM)</li>
+                                <li>Pancard</li>
+
+
+                            </ul>
+                        </li>
+                        <li>
+                            <h5>Travels & Hotel</h5>
+                            <ul>
+                                <li>Flight Booking</li>
+                                <li>Bus Booking</li>
+                                <li>Hotel Booking</li>
+
+
+
+
+                            </ul>
+                        </li>
+                        <li>
+                            <h5>Others</h5>
+                            <ul>
+                                <li>Digital Gift Cards</li>
+                                <li>Security</li>
+                                <li>Ecommerce</li>
+                                <li>Services</li>
+
+
+
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-12 custom-control-font">
+                <h3>badges</h3>
+                <div class="for-fotter-b">
+                        <div style="padding:10px;">
+                            <img src="/AdminDesign/images/guarantee.svg" style="margin-top:12%;" />
+                        </div>
+
+                </div>
+            </div>
+
+
+        </div>
+        <div class="main_footer">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <ul class="right_menu list-inline">
+                        
+                        <li><a id="Helpbutton">Help</a></li>
+                        <li><a id="Tcbutton">Terms & Conditions</a></li>
+                        <li><a id="Privacybutton">Privacy</a></li>
+                        
+                        
+                    </ul>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="copyright_text text-right">
+                        <p>© 2019 - 2020 All Rights Reserved | MAHARSHI ENTERPRISE </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="term-pop for-help-pop" style="display:none;">
+        <div class="term-pop-in">
+            <h2 class="help-foot-head">Help</h2>
+            <div class="term-pop-close">&#10006; </div>
+            <p id="helpContent"></p>
+        </div>
+
+    </div>
+    <div class="term-pop for-term-pop" style="display:none;">
+        <div class="term-pop-in" style="overflow-y:scroll;">
+            <h2 class="help-foot-head">Terms & Conditions</h2>
+            <div class="term-pop-close">&#10006; </div>
+            <p id="TcContent"></p>
+        </div>
+
+    </div>
+    <div class="term-pop for-privacy-pop" style="display:none;">
+        <div class="term-pop-in">
+            <h2 class="help-foot-head">Privacy</h2>
+            <div class="term-pop-close">&#10006; </div>
+            <p id="Privacycontent"></p>
+        </div>
+
+    </div>
+
+
+    
+    <div class="scrollup fullbodydycolorbg" href="#"><i class="fa fa-chevron-up"></i></div>
+    <script>
+        // scrolltop
+        $('.scrollup').click(function () {
+            $("html,body").animate({
+                scrollTop: 0
+            }, 1000);
+            return false;
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#Helpbutton').click(function () {
+                $('.for-help-pop').fadeIn();
+            });
+            $('#Tcbutton').click(function () {
+                $('.for-term-pop').fadeIn();
+            });
+            $('#Privacybutton').click(function () {
+                $('.for-privacy-pop').fadeIn();
+            });
+
+
+
+            $('.term-pop-close').click(function () {
+                $('.term-pop').fadeOut();
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $(".mouse").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+
+
+
+
+
+        //bottom to top
+
+        // fadeIn fadeOut
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 400) {
+                $('.scrollup').fadeIn();
+            } else {
+                $('.scrollup').fadeOut();
+            }
+        });
+    </script>
+
+
+    
+
+        <input type="button" value="sleep" id="btnsleep" data-toggle="modal" data-target="#sleep-modal" style="display:none;">
+        <div class="modal fade" id="sleep-modal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img src="/Deskrop Sleep Mode.png" id="mImage" class="img-responsive" />
+                    </div>
+                    <div>
+                        <span style="font-size:15px; margin-left:15px;">Mail-id :-<b style="color:red;"> maharshi.telecom@gmail.com</b> </span>
+                        <br />
+                        <span style="font-size:15px; margin-left:15px;">Mobile No :-<b style="color:red;"> 9428556279</b></span>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" style="background-color:darkgray; font-size:16px;">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    
+    <script src="/MainFrontDesign/js/vendor/bootstrap.min.js"></script>
+    
+    <script src="/MainFrontDesign/js/jquery.mixitup.min.js"></script>
+    <script src="/MainFrontDesign/js/jquery.easing.1.3.js"></script>
+    <script src="/MainFrontDesign/js/jquery.masonry.min.js"></script>
+    <script src="/MainFrontDesign/js/jquery.fancybox.pack.js"></script>
+    <script src="/MainFrontDesign/js/plugins.js"></script>
+    <script src="/MainFrontDesign/js/main.js"></script>
+    <script src="/MainFrontDesign/js/slick.js"></script>
+
+
+    <script>
+        var HelpElement = "\u003ch3\u003e\u003cstrong\u003eHow to check my past transaction?\u003c/strong\u003e\u003c/h3\u003e\r\n\r\n\u003cp\u003eYes, you can easily check your past transaction, just login your accountand click on history bottom right side and see all type off transections.\u003c/p\u003e\r\n\r\n\u003ch3\u003e\u003cstrong\u003eCan I claim refund of amount added to Aasha Digital Indiawallets?\u003c/strong\u003e\u003c/h3\u003e\r\n\r\n\u003cp\u003eNo, any amount added to Aasha Digital India wallet is non-refundable; it can be used for recharges only. !\u003c/p\u003e\r\n\r\n\u003ch3\u003e\u003cstrong\u003eWhat should I do if recharge fails?\u003c/strong\u003e\u003c/h3\u003e\r\n\r\n\u003cp\u003eWait for 5 to 10 minutes after the payment is successfully done. If your mobile number is still not recharged then go to link and register a complaint. We will respond to it as soon as possible.\u003c/p\u003e\r\n\r\n\u003ch3\u003e\u003cstrong\u003eHow much time it takes to recharge?\u003c/strong\u003e\u003c/h3\u003e\r\n\r\n\u003cp\u003eNormally, you get your recharge immediately, as soon as payment is made and you will get confirmation mail from Aasha Digital India.\u003c/p\u003e\r\n\r\n\u003ch3\u003e\u003cstrong\u003eFor whom I canrecharge?\u003c/strong\u003e\u003c/h3\u003e\r\n\r\n\u003cp\u003eYou can recharge for your loved ones using the same account. You just need to know the mobile number to make a successful recharge.\u003c/p\u003e\r\n\r\n\u003ch3\u003e\u003cstrong\u003eIs there any extra charge for recharging?\u003c/strong\u003e\u003c/h3\u003e\r\n\r\n\u003cp\u003eNo, there is no extra charge for recharging.You will get same talk time what your mobile service provider offers you.\u003c/p\u003e\r\n";
+        $('#helpContent').html(decodeURIComponent(HelpElement))
+
+        var TcElement = "\u003ch2\u003e\u003cstrong\u003eAasha Digital IndiaTerms and Conditions\u003c/strong\u003e\u003c/h2\u003e\r\n\r\n\u003cp\u003eThe access and use of this website www.aashadigitalindia.com and Aasha Digital India Wallet mobile app are subject to some terms and conditions. As used in the agreement, words like \u0026lsquo;we\u0026rsquo;, \u0026lsquo;our\u0026rsquo; or \u0026lsquo;us\u0026rsquo; refers to Aasha Digital Indiaand the words like \u0026lsquo;you\u0026rsquo;, \u0026lsquo;your\u0026rsquo; \u0026lsquo;yourself\u0026rsquo; refers to the user. Please read the term and conditions mentioned below carefully before you access, use, register or download materials from this website or app. We reserve right to amend or add the terms and conditions at any point of time without any prior notice. By registering or using the service of our website or app, you give your consent to be bound with all the terms and conditions (including the additional and amended ones).\u003c/p\u003e\r\n\r\n\u003cp\u003e\u0026nbsp;\u003c/p\u003e\r\n\r\n\u003cp\u003e\u003cstrong\u003eCoupons and Offers\u003c/strong\u003e\u003c/p\u003e\r\n\r\n\u003cp\u003eIn case if you did not get the proper benefit of the coupon even after getting the coupon code, then you can request us for applying the coupon code but we are not at all responsible if the coupon code did not work.\u003c/p\u003e\r\n\r\n\u003cp\u003e\u0026nbsp;\u003c/p\u003e\r\n\r\n\u003cp\u003e\u003cstrong\u003ePassword and Security\u003c/strong\u003e\u003c/p\u003e\r\n\r\n\u003cp\u003eYou understand and agree that password and other information with respect to your Aasha Digital India Wallet account are confidential information. You agree to immediately change your password on receipt and to continue changing the password periodically You agree that Aasha Digital India Wallet shall not be responsible if you share your password and other confidential information about your Aasha Digital India Wallet account with any one fail to abide by the advice given in this document\u0026rsquo;s about change the password periodically.\u003c/p\u003e\r\n\r\n\u003cp\u003e\u0026nbsp;\u003c/p\u003e\r\n\r\n\u003cp\u003e\u0026nbsp;\u003c/p\u003e\r\n\r\n\u003cp\u003e\u003cstrong\u003eTerms Regarding Your Mobile Number\u003c/strong\u003e\u003c/p\u003e\r\n\r\n\u003cp\u003eAasha Digital India wallet is linked to the mobile number that you provided at the time of registration. We may send alerts to that number or to any such number replaced or informed by you. The alerts will be sent only if the mobile phone mode is On and in case the mobile phone mode is Off, then you may not get or get after some delay any alerts sent during such period. We may call the mobile phone number provided by the customer while registering for the service or to any such number replaced and informed by the customer, for the purpose of collecting feedback from the customer regarding the services provided by us.\u003c/p\u003e\r\n\r\n\u003cp\u003e\u0026nbsp;\u003c/p\u003e\r\n\r\n\u003cp\u003e\u003cstrong\u003eEligibility\u003c/strong\u003e\u003c/p\u003e\r\n\r\n\u003cul\u003e\r\n\t\u003cli\u003eUse of our services is available only to persons who can form legally binding contracts under Indian Contract Act, 1872. Persons who are \u0026quot;incompetent to contract\u0026quot; within the meaning of the Indian Contract Act, 1872 including minors, un-discharged insolvents, unsound minded persons, etc. If any minor wants to transact on our website or app, then such use or transaction may be made by his parents or legal guardian but the minor himself/herself cannot transact. If it is brought to Aasha Digital India\u0026rsquo;s notice or if it is discovered that you are a minor according to the meaning provided under Indian Contract Act, 1872, i.e. below 18 years in normal case and below 21 years if guardian is appointed by the Court. ThenAasha Digital India reserves right to terminate your membership and/or refuse to provide you access to the website and associated application.\u003c/li\u003e\r\n\t\u003cli\u003eAasha Digital India reserves the right to refuse access to use the Services offered at the Website and associated Applications to new Users or to terminate access granted to existing Users at any time without according any reason for doing so.\u003c/li\u003e\r\n\t\u003cli\u003eYou confirm to provide us any and every detail we requires to obtain from you, including such other personal or proprietary information relating to any of your acts or omissions or violations or other persons who may be a party with you, on suspicion or otherwise in relation to the use of our site/app.\u003c/li\u003e\r\n\t\u003cli\u003eYou hereby declare that your name does not at any time appear in the consolidated list of terrorist individuals /organizations as circulated by RBI from time to time.\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\r\n\u003cp\u003e\u0026nbsp;\u003c/p\u003e\r\n\r\n\u003cp\u003e\u003cstrong\u003eCharges\u003c/strong\u003e\u003c/p\u003e\r\n\r\n\u003cp\u003eYou agree to pay all fees and charges that you incur and Aasha Digital India reserves right to change the amount of or basis of determining charges or fees at any point of time without any notice to the user. All fees and charges are receivable in accordance with payment terms in effect at the time the fee or the charge becomes receivable\u003c/p\u003e\r\n\r\n\u003cp\u003e\u0026nbsp;\u003c/p\u003e\r\n\r\n\u003cp\u003e\u003cstrong\u003eGeneral Terms\u003c/strong\u003e\u003c/p\u003e\r\n\r\n\u003cul\u003e\r\n\t\u003cli\u003e\u0026bull; You conform to provide correct and accurate credit/ debit card details to the approved payment gateway for availing Services on the web site and associated Applications. You want to use your own credit/ debit card. You shall not use the credit/ debit card which isn\u0026#39;t lawfully owned by you, i.e. in any transaction, the knowledge provided by you may not be utilized or shared with any third party unless required in reference to fraud verifications or by law, regulation or writ. You may be solely liable for the protection and confidentiality of your credit/ debit card details. Aasha Digital India expressly disclaims all liabilities that will arise as a consequence of any unauthorized use of your credit/ debit card.\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\r\n\u003cp\u003e\u0026nbsp;\u003c/p\u003e\r\n\r\n\u003cul\u003e\r\n\t\u003cli\u003eAasha Digital India shall not be responsible for any fraud or misuse of your account and you agree to be personally liable for any and all costs, taxes, charges, claims or liabilities of any nature, arising due to any such fraud or misuse or your account.\u003c/li\u003e\r\n\t\u003cli\u003eWe will not be held liable for unauthorized use of Aasha Digital India Wallet on account of loss/theft/misplacement of Mobile number and/or SIM, unless you have informed our customer care about such loss and have blocked wallet temporarily till you re-activate the same using a new SIM with the same mobile number.\u003c/li\u003e\r\n\t\u003cli\u003eIt must be noted that you shall continue to be held liable for any unauthorized use of your Aasha Digital India Wallet account till you inform Aasha Digital India Wallet Customer care such loss and request for blocking your wallet account is executed.\u003c/li\u003e\r\n\t\u003cli\u003eAny wallet not transaction for 3 months or more may be treated as expired and the value may be forfeited. Such wallet user is going to be intimated through SMS information to the present effect in accordance with regulatory frame work prevailing and amended from time to time.\u003c/li\u003e\r\n\t\u003cli\u003e\u0026nbsp;Aasha Digital India Wallet and other Aasha Digital IndiaProducts/Services made available on Aasha Digital India Wallet mobile applications are GPRS/EDGE/3G Dependent and cannot be availed by you in the event of GPRS/EDGE/3G failure and/or download error. Aasha Digital India is not responsible in any manner whatsoever for non-provisioning of the services due to GPRS/EDGE/3G failure/connectivity failure/download error.\u003c/li\u003e\r\n\t\u003cli\u003eAasha Digital India Wallet Products/Services for select content is Operator dependent. Aasha Digital India is not obligated to provide Services to the Customers in relation to the areas/ Operators/ Service Providers not mentioned herein.\u003c/li\u003e\r\n\t\u003cli\u003eAasha Digital India Wallet shall not be responsible for any Operator nor be held responsible for not having any specific unit required in its Product Portfolio. We are not obligated to provide Services to the Customers in case the Operator/Service Provider does not have the required product or the required denomination.\u003c/li\u003e\r\n\t\u003cli\u003eInstant refund on transaction failure: If there is a transaction failure (excluding bill payments), there will be instant refund into Aasha Digital India Wallet if the transaction is done using credit card or debit card via Aasha Digital India website/app. In case if you do not get the refund amount, then please contact to our customer care services.\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\r\n\u003cp\u003e\u003cstrong\u003eAasha Digital India have the right, but not the obligation, to take any of the following actions in its sole discretion at any time and for any reason without giving you any prior notice:-\u003c/strong\u003e\u003c/p\u003e\r\n\r\n\u003cul\u003e\r\n\t\u003cli\u003eRestrict, suspend, or terminate your access to all or any or any a part of its Services;\u003c/li\u003e\r\n\t\u003cli\u003eChange, suspend, or discontinue all or any a part of its Services;\u003c/li\u003e\r\n\t\u003cli\u003eRefuse, move, or remove any material that you simply withstand its web-sites/app for any reason;\u003c/li\u003e\r\n\t\u003cli\u003eRefuse, move, or remove any content that\u0026#39;s available on its web-sites/app or on its social media;\u003c/li\u003e\r\n\t\u003cli\u003eDeactivate or delete your accounts and every one related information and files in your account; Establish general practices and limits concerning use of its web-sites/app.\u003c/li\u003e\r\n\t\u003cli\u003eSome of above actions could also be results of any transaction activity which can come under \u0026ldquo;suspicious transactions\u0026rdquo; and would require immediate action without prior intimation as per current regulatory framework. You agree that Aasha Digital India will not be liable to you or any third party for taking any of these actions.\u003c/li\u003e\r\n\t\u003cli\u003eAll rights reserved. Any rights not expressly granted herein are reserved.\u003c/li\u003e\r\n\u003c/ul\u003e\r\n";
+        $('#TcContent').html(decodeURIComponent(TcElement))
+
+        var PrivacyElement = "\u003cp\u003evbfgbfgfgggfgnflkjjgftyuuty\u003c/p\u003e\r\n";
+        $('#Privacycontent').html(decodeURIComponent(PrivacyElement))
+
+    </script>
+
+    <script type="text/javascript">
+        var val1 = "";
+        function animation(type) {
+
+            var url = '/Home/pagecontetn'
+            $.ajax({
+                url: url,
+                data: { type: type },
+                cache: false,
+                type: "POST",
+                success: function (data) {
+                    if (data != "") {
+                        document.getElementById("shoppingBasket").innerHTML = data;
+                        $('#defaultModal').modal('show');
+                    }
+                },
+                error: function (reponse) {
+                    alert("error : " + reponse);
+                }
+            });
+
+        }
+    </script>
+    <script>
+        window.onload=function()
+        {
+            var block = '';
+            if (block == "websiteblock") {
+                $('#btnsleep').click();
+                $("#sleep-modal").modal('show');
+            }
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyALrSTy6NpqdhIOUs3IQMfvjh71td2suzY&ver=3.exp"></script>
+    <script type="text/javascript">
+        navigator.geolocation.getCurrentPosition(
+            function (position) { // success cb
+                console.log(position);
+
+            },
+            function () { // fail cb
+            }
+        );
+
+        $(document).ready(function () {
+
+            /* HTML5 Geolocation */
+            navigator.geolocation.getCurrentPosition(
+                function (position) { // success cb
+
+                    /* Current Coordinate */
+                    var lat = position.coords.latitude;
+                    var lng = position.coords.longitude;
+
+                    var google_map_pos = new google.maps.LatLng(lat, lng);
+
+                    /* Use Geocoder to get address */
+                    var google_maps_geocoder = new google.maps.Geocoder();
+
+                    google_maps_geocoder.geocode(
+                        { 'latLng': google_map_pos },
+                        function (results, status) {
+                            if (status == google.maps.GeocoderStatus.OK && results[0]) {
+                                console.log(results[0].formatted_address);
+                                alert(results[0].formatted_address)
+                            }
+                        }
+                    );
+                },
+                function () { // fail cb
+                }
+            );
+        });
+    </script>
+
+    
+    <script>
+        $(window).scroll(function () {
+            var sticky = $('.Header-section'),
+                scroll = $(window).scrollTop();
+
+            if (scroll >= 40) {
+                sticky.addClass('fixed');
+            }
+            else {
+                sticky.removeClass('fixed');
+
+            }
+        });
+    </script>
+</body>
+</html>
+

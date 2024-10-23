@@ -1,0 +1,106 @@
+body {
+    /*font-size:25px;*/
+}
+.main1 {
+  
+    /* background-image: url('../../fonts/images/banner.jpg'); */
+    position: relative;
+}
+
+   
+    .main1 .content1 {
+        width: 1000px !important;
+        height: 703px !important;
+        padding-left: 0px !important;
+        padding-top: 20px;
+        padding-right: 20px;
+        position: absolute !important;
+        top: 0px;
+        left: 0px;
+       /* z-index: 1500 !important;  */
+        width: 100%;
+    }
+.content1
+{
+  position:absolute !important; top: 0px; left: 0px; z-index: 1500; width:100%;
+  font-size:25px;
+}
+.content1 h2{
+    font-size:50px;
+}
+.bold 
+{
+	font-weight: bold;
+}
+.box-title 
+{
+    display:none;
+}
+@media print{
+    .btn-primary {
+        display: none;
+    }
+}
+.head  
+{
+    display:none;
+}
+.head1 
+{
+    display:none;
+}
+.mainmenu
+{
+    display:none;
+}
+.navbar
+{
+    /*display:none;*/
+}
+#top-strip
+{
+    display:none;
+}
+.headerid
+{
+    display:none;
+}
+.box-header {
+    display:none;
+}
+.well {
+    display:none;
+}
+
+.h5head{
+  margin-left:120px;
+  }
+
+.data
+{
+    width:470px;
+    margin-top:-25px;
+}
+
+.clogo {
+    width: 78px;
+    position: absolute;
+    left: 58px;
+    top: 42px;
+    height: 57px;
+    line-height: 53px;
+}
+#print
+{
+    display:block !important;
+}
+#screen
+{
+    display:none;
+}
+
+@media print{
+    .navbar {
+        display: none;
+    }
+}

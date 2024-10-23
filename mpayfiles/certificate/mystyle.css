@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes|Open+Sans');
+.text-center {
+    /*text-align: center !important;*/
+}
+.col-md-12 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+    display:block;
+}
+.main1 .content1 {
+    height: 800px;
+    padding-left: 0px;
+    padding-top: 20px;
+    padding-right: 10px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1500;
+    width: 100%;
+}
+/*.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}*/
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+.top-left1 {
+    position:relative;
+    top: 52px;
+    left: 36px;
+}
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+.centered {
+    position: absolute;
+  }
+
+
+.divtext1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 21%;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    /*font-family: 'Tangerine', cursive;*/
+    font-family: 'Satisfy', cursive;
+    /*font-family: 'Great Vibes', cursive;*/
+    font-size:33px;
+}
+.divtext2 {
+    position: absolute;
+    top: 0;
+    left: .3%;
+    width: 100%;
+    padding-top:38%;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    font-family: 'Tangerine', cursive;
+    font-family: 'Satisfy', cursive;
+    /*font-family: 'Great Vibes', cursive;*/
+    font-size:21px;
+}
+.divtext3 {
+    position: absolute;
+    top: 0;
+    left:50px;
+    right:0;
+    width: 60%;
+    padding-top:53%;
+    text-align:center;
+    font-weight: normal;
+    color: black;
+    font-family: arial;
+    font-size:11px;
+}
+.mylogo {
+    position: absolute;
+    top: 0;
+    left: 72px;
+    right: 0;
+    height: auto;
+    width: 13%;
+    padding-top: 7%;
+    text-align: center;
+}
+.divtext {
+    position: absolute;
+    top: 0;
+    left:-14%;
+    width: 100%;
+    padding-top: 3%;
+    font-weight: bold;
+    color: black;
+    font-family: arial;
+    font-size: 12px;
+}
+
+.print-btn
+{
+    display: inline-block;
+    padding: 6px 16px;
+    font-size: 17px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fffcfc;
+    background-color: #d82626;
+    border: none;
+    border-radius: 5px;
+    /*float: left;*/
+    margin-bottom:10px;
+}
+.mysign {
+    position: absolute;
+    top: 0;
+    left: 63%;
+    right: 0;
+    height: auto;
+    width: 8%;
+    padding-top:49.5%;
+    text-align: center;
+}
+
+@media screen and (max-width: 412px) {
+    .divtext1 {
+        font-size: 5px;
+        padding-top: 21%;
+    }
+    .divtext2 {
+        font-size: 5px;
+        padding-top: 37%;
+    }
+    .divtext {
+        font-size: 5px;
+    }   
+}
+
+@media (min-width:1200px) and (max-width: 1200px) {
+    .clogo {
+        width: 166px;
+        position: absolute;
+        left: 40px;
+        top: 61px;
+        height: 56px;
+        line-height: 53px;
+    }
+    .divtext {
+        font-size: 14px;
+    }
+    .divtext1 {
+        font-size: 37px;
+    }
+    .divtext3 {
+        position: absolute;
+        top: 0;
+        left: 64px;
+       
+        font-size: 15px;
+    }
+}
+
+    @media screen and (max-width: 1023px) {
+        .divtext1 {
+            font-size: 28px;
+            padding-top: 21%;
+        }
+
+        .divtext2 {
+            font-size: 17px;
+            padding-top: 38%;
+        }
+
+        .divtext3 {
+            font-size: 10px;
+            left: 56px;
+        }
+
+        .divtext {
+            padding-top: 3%;
+            left: -85px;
+        }
+
+        .clogo {
+            width: 85px !important;
+            position: absolute;
+            left: 0px;
+            top: 44px !important;
+        }
+    }
+    @media (min-width:1024px) and (max-width:1100px){
+        .clogo {
+            width: 99px !important;
+            position: absolute;
+            left: 68px !important;
+            top: 60px !important;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        .divtext1 {
+            font-size: 13px;
+            padding-top: 23%;
+        }
+
+        .divtext2 {
+            font-size: 12px;
+            padding-top: 38%;
+        }
+
+        .divtext3 {
+            font-size: 6px;
+            padding-top: 53%;
+            left: 30px;
+        }
+
+        .mysign {
+            padding-top: 50%;
+        }
+
+        .divtext {
+            font-size: 6px;
+            left: -57px;
+            top: 2px;
+        }
+
+        .clogo {
+            width: 90px !important;
+            position: absolute;
+            left: 0px;
+            top: 35px !important;
+        }
+        .pd-x-0 {
+            padding:0px;
+        }
+    }
+
+    @media screen and (min-width: 360px)and (max-width: 374px) {
+        .divtext1 {
+            font-size: 14px;
+            padding-top: 21%;
+        }
+
+        .clogo {
+            width: 40px !important;
+            position: absolute;
+            left: 21px !important;
+            top: 11px !important;
+        }
+
+        .divtext2 {
+            font-size: 9px;
+            padding-top: 38%;
+        }
+
+        .divtext3 {
+            font-size: 6px;
+            padding-top: 53% !important;
+            left: 23px;
+        }
+
+        .mysign {
+            padding-top: 49%;
+            width: 9%;
+        }
+
+        .divtext {
+            font-size: 6px;
+            left: -39px;
+            top: 0px;
+        }
+
+        .mylogo {
+            left: 32px;
+            top: -1px;
+        }
+    }
+
+    @media screen and (min-width: 361px)and (max-width: 375px) {
+        .divtext1 {
+            font-size: 16px;
+            padding-top: 21%;
+        }
+
+        .clogo {
+            width: 42px !important;
+            position: absolute;
+            left: 31px !important;
+            top: 13px !important;
+        }
+
+        .divtext2 {
+            font-size: 9px;
+            padding-top: 38%;
+        }
+
+        .divtext3 {
+            font-size: 6px;
+            padding-top: 53% !important;
+            left: 23px;
+        }
+
+        .mysign {
+            padding-top: 49%;
+            width: 9%;
+        }
+
+        .divtext {
+            font-size: 7px;
+            left: -41px;
+            top: 0px;
+        }
+
+        .mylogo {
+            left: 32px;
+            top: -1px;
+        }
+    }
+
+    @media screen and (min-width: 376px)and (max-width: 414px) {
+        .divtext1 {
+            font-size: 16px;
+            padding-top: 21%;
+        }
+
+        .clogo {
+            width: 43px !important;
+            position: absolute;
+            left: 38px !important;
+            top: 16px !important;
+        }
+
+        .divtext2 {
+            font-size: 9px;
+            padding-top: 38%;
+        }
+
+        .divtext3 {
+            font-size: 6px;
+            padding-top: 53% !important;
+            left: 23px;
+        }
+
+        .mysign {
+            padding-top: 49%;
+            width: 9%;
+        }
+
+        .divtext {
+            font-size: 8px;
+            left: -44px;
+            top: 0px;
+        }
+
+        .mylogo {
+            left: 32px;
+            top: -1px;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        .divtext2 {
+            font-size: 8px;
+            padding-top: 38%;
+        }
+
+        .divtext {
+            font-size: 7px;
+            left: -33px;
+            top: -1px;
+        }
+
+        .divtext3 {
+            font-size: 5px;
+            padding-top: 53%;
+            left: 20px;
+        }
+
+        .mysign {
+            padding-top: 50%;
+            left: 205px;
+            width: 8%;
+        }
+
+        .clogo {
+            position: absolute;
+            left: 26px !important;
+            top: 7px !important;
+            height: 53px;
+            line-height: 53px;
+            width: 37px !important;
+        }
+
+        .divtext1 {
+            font-size: 13px;
+            padding-top: 21%;
+        }
+    }

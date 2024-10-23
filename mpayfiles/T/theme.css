@@ -1,0 +1,7 @@
+
+.btn-custom, .top-sep:after, .service-box .icon-box, .btm-sep:after, .form-group .zmdi, .contact-section .contact-detail li {
+    background-color: #4e63d7;
+}
+.btn.btn-light, .back-top span, .counter-box .icon-box i {
+    color: #4e63d7;
+}

@@ -1,0 +1,223 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent; }
+
+@-ms-viewport {
+  width: device-width; }
+
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #E9ECEF; 
+}
+  
+.loginPage{
+    background: url(../assets/img/bg-pattern.jpg);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 15px;
+}
+
+.login-wrapper{
+    width: 100%;
+    max-width: 800px;
+    background: #ffffff url(../assets/img/login-bg.png) no-repeat;
+    background-position: center bottom -35px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.2);
+    border-radius: 24px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.LogoBox{
+    width: 45%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px 0 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+}
+.LogoBox a{
+    position: relative;
+    z-index: 2;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+}
+.LogoBox a svg{
+    width: 100px;
+}
+.LogoBox a p{
+    font-size: 40px;
+    color: #ffffff;
+    margin: 0;
+}
+.LogoBox a p span{
+    color: #4ca1f4;
+}
+.LogoBox:after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -80px;
+    top: -80px;
+    width: 140%;
+    height: 140%;
+    /*background: radial-gradient(at left top, rgb(41,17,118) 0%, rgb(31,11,96) 66%, rgb(21,5,73) 100%);*/
+    
+    /*background: radial-gradient(at left top, rgb(167,0,0) 0%, rgb(167,0,0) 66%, rgb(167,0,0) 100%);*/
+    /*background: radial-gradient(at left top, rgb(4, 86, 152) 0%, rgb(4, 86, 152) 66%, rgb(4, 86, 152) 100%);*/
+    
+   /* background: radial-gradient(at left top, rgb(76, 161, 244) 0%, rgb(76, 161, 244) 66%, rgb(76, 161, 244) 100%);*/
+    
+    border-radius: 0 50% 50% 0;
+    border: 20px solid #d0d4ec;
+    z-index: 1;
+}
+.loginBox{
+    width: 55%;
+    padding: 20px 20px 20px 30px;
+}
+.loginBox .heading{
+    padding: 20px 0;
+}
+.loginBox .heading h3{
+    font-size: 34px;
+    font-weight: 600;
+    color: #4ca1f4;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.loginBox .heading p{
+    font-size: 18px;
+    font-weight: 400;
+    color: #333333;
+    line-height: 20px;
+    margin-bottom: 5px;
+}
+.loginBox .form-group{
+    margin-bottom: 20px;
+    display: block;
+}
+.loginBox .form-control{
+    height: 55px;
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #f2f2f2;
+    border:0;
+    font-size: 18px;
+    color: #333333;
+    border-radius: 6px;
+    font-weight: 400;
+    outline: none;
+    border: 1px solid #f3f3f3;
+}
+.loginBox .form-control:focus{
+    border: 1px solid #4ca1f4;
+}
+.loginBox input::placeholder{
+    font-weight: 400;
+    color: #969697;
+    font-family: 'Montserrat', sans-serif;
+}
+.actionRow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.actionRow .buttonSignIn{
+    border-radius: 6px;
+    padding: 10px 40px;
+    font-size: 22px;
+    color: #ffffff;
+    border: 0;
+    background-image: -moz-linear-gradient( -90deg, rgb(41,17,118) 0%, rgb(31,11,96) 66%, rgb(21,5,73) 100%);
+    background-image: -webkit-linear-gradient( -90deg, rgb(41,17,118) 0%, rgb(31,11,96) 66%, rgb(21,5,73) 100%);
+    background-image: -ms-linear-gradient( -90deg, rgb(41,17,118) 0%, rgb(31,11,96) 66%, rgb(21,5,73) 100%);
+    cursor: pointer;
+    outline: none;
+}
+.buttonSignIn:hover{
+    background:#381d90;
+}
+.forgotLink{
+    font-size: 16px;
+    color: #4ca1f4;
+}
+.signUpLink{
+    font-size: 16px;
+    color: #494949;
+    font-weight: 500;
+    text-align: right;
+}
+.signUpLink a{
+    color: #4ca1f4;
+}
+
+@media only screen and (max-width: 768px){
+    .loginPage{
+        height: 100%;
+    }
+    .login-wrapper{
+        flex-wrap: wrap;
+        background-position: left 16px bottom -58px;
+    }
+    .LogoBox{
+        width: 100%;
+        height: 250px;
+        padding: 20px 10px 60px;
+        border-radius: 24px 24px 0 0;
+    }
+    .LogoBox:after{
+        width: 120%;
+        height: 120%;
+        border-radius: 0 0 50% 50%;
+        bottom: 0;
+        left: -40px;
+        right: -40px;
+        top: -52px;
+    }
+    .loginBox{
+        width: 100%;
+        padding: 15px;
+    }
+
+    
+}
+@media only screen and (max-width: 480px){
+    .LogoBox a svg {
+        width: 75px;
+    }
+    .LogoBox a p{
+        font-size: 30px;
+    }
+    .LogoBox:after{
+        left: -30px;
+    }
+    .actionRow{
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+    .actionRow .buttonSignIn{
+        margin-bottom: 20px;
+    }
+    .signUpLink{
+        text-align: center;
+    }
+}

@@ -1,0 +1,565 @@
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+class Fund_transfer extends CI_Controller {
+	private function logentry($data)
+	{
+	/*	$filename = "fundrev.txt";
+		if (!file_exists($filename)) 
+		{
+			file_put_contents($filename, '');
+		} 
+		$this->load->library("common");
+
+		$this->load->helper('file');
+	
+		$sapretor = "------------------------------------------------------------------------------------";
+		
+write_file($filename." .\n", 'a+');
+write_file($filename, $data."\n", 'a+');
+write_file($filename, $sapretor."\n", 'a+');*/
+	}
+	private function checkduplicate($cr_user_id,$dr_user_id,$amount)
+    {
+        
+    	putenv("TZ=Asia/Calcutta");
+    	date_default_timezone_set('Asia/Calcutta');
+	    $date = date("Y-m-d h:i");		
+
+
+    	$add_date = $date;
+    	$rslt = $this->db->query("insert into tblpaymentlock (cr_user_id,dr_user_id,amount,txndate) values(?,?,?,?)",array($cr_user_id,$dr_user_id,$amount,$add_date));
+    	  if($rslt == "" or $rslt == NULL)
+    	  {
+    		return false;
+    	  }
+    	  else
+    	  {
+    	  	return true;
+    	  }
+    }
+	public function getBName()
+	{ 
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+			$this->output->set_header("Pragma: no-cache"); 
+			if(isset($_GET['otheruserid']) and isset($_GET['username']) and isset($_GET['pwd'])  )
+			{
+				$otheruserid = $_GET['otheruserid'];
+				$username = $_GET['username'];
+				$password = $_GET['pwd'];
+			}
+			else if(isset($_POST['otheruserid']) and isset($_POST['username']) and isset($_POST['pwd'])  )
+			{
+				$otheruserid = $_POST['otheruserid'];
+				$username = $_POST['username'];
+				$password = $_POST['pwd'];
+			}
+			else
+			{echo 'Paramenter is missing';exit;}			
+			 	
+				$userinfo = $this->db->query("select * from tblusers where username = ? and password = ?",array($username,$password));									
+				if($userinfo->num_rows() == 1)
+				{
+					$usertype_name = $userinfo->row(0)->usertype_name;
+					//$hostname = $userinfo->row(0)->hostname;
+					if($usertype_name == "SuperDealer" or  $usertype_name == "MasterDealer" or $usertype_name == "Distributor")
+					{
+						$otheruserrslt = $this->db->query("select * from tblusers where username = ? ",array($otheruserid));
+						if($otheruserrslt->num_rows() == 1)
+						{
+							$Other_usertype_name = $otheruserrslt->row(0)->usertype_name;
+							//$Other_hostname = $otheruserrslt->row(0)->hostname;
+							//if($hostname == $Other_hostname)
+							if(true)
+							{
+								if($Other_usertype_name == "Agent" or $Other_usertype_name == "Distributor")
+								{
+									$balance = $this->Common_methods->getAgentBalance($otheruserrslt->row(0)->user_id);
+									$balance2 = $this->Ew2->getAgentBalance($otheruserrslt->row(0)->user_id);
+										$resparray = array(
+                            				'Error'=>0,
+                            				'Message'=>'Success',
+                            				'BusinessName'=>$otheruserrslt->row(0)->business_name,
+                            				'Balance'=>$balance,
+											'Balance2'=>$balance2
+                            				);
+                            				echo json_encode($resparray);exit;
+								
+								}	
+								else
+								{
+											$resparray = array(
+                            				'Error'=>1,
+                            				'Message'=>'Invalid User'
+                            				);
+                            				echo json_encode($resparray);exit;
+								}
+							}
+							else
+							{
+										$resparray = array(
+                            				'Error'=>1,
+                            				'Message'=>'Invalid User'
+                            				);
+                            				echo json_encode($resparray);exit;
+							}
+							
+							
+						}
+						else
+						{
+								$resparray = array(
+                            				'Error'=>1,
+                            				'Message'=>'Invalid User'
+                            				);
+                            				echo json_encode($resparray);exit;
+						}	
+					}
+					else if($usertype_name == "WLMasterDealer" or $usertype_name == "WLDistributor")
+					{
+						$otheruserrslt = $this->db->query("select * from tblusers where username = ?",array($otheruserid));
+						if($otheruserrslt->num_rows() == 1)
+						{
+							$Other_usertype_name = $otheruserrslt->row(0)->usertype_name;
+							$Other_hostname = $otheruserrslt->row(0)->hostname;
+							if($hostname == $Other_hostname)
+							{
+								if($Other_usertype_name == "WLAgent" or $Other_usertype_name == "WLDistributor")
+								{
+									$balance = $this->Wlmethods->getAgentBalance($otheruserrslt->row(0)->user_id);
+									
+										$resparray = array(
+                            				'Error'=>0,
+                            				'Message'=>'Success',
+                            				'BusinessName'=>$otheruserrslt->row(0)->businessname,
+                            				'Balance'=>$balance
+                            				);
+                            				echo json_encode($resparray);exit;
+									
+								}
+								else
+								{
+										$resparray = array(
+                            				'Error'=>1,
+                            				'Message'=>'Invalid User'
+                            				);
+                            				echo json_encode($resparray);exit;
+								}	
+							}
+							else
+							{
+								
+										$resparray = array(
+                            				'Error'=>1,
+                            				'Message'=>'Invalid User'
+                            				);
+                            				echo json_encode($resparray);exit;
+							}
+							
+							
+						}
+						else
+						{
+							
+										$resparray = array(
+                            				'Error'=>1,
+                            				'Message'=>'Invalid User'
+                            				);
+                            				echo json_encode($resparray);exit;
+						}	
+					}
+					
+				}
+		
+	}
+	
+	public function test()
+	{
+	    $cr_user_id = 293;
+	    $dr_user_id = 292;
+	    $amount = 30000;
+	    
+	    echo $this->payment_entry_locking_5_minutes($cr_user_id,$dr_user_id,$amount);
+	}
+	private function payment_entry_locking_5_minutes($cr_user_id,$dr_user_id,$amount)
+	{
+	    //error_reporting(-1);
+	    //ini_set('display_errors',1);
+	   // $this->db->db_debug = TRUE;
+	    
+	    $rsltpayentry = $this->db->query("select add_date,cr_user_id,dr_user_id from tblpayment where cr_user_id = ? and dr_user_id = ? and amount = ? and payment_date = ? order by payment_id desc limit 1 ",array($cr_user_id,$dr_user_id,$amount,$this->common->getMySqlDate()));
+	    //print_r($rsltpayentry->result());exit;
+	    if($rsltpayentry->num_rows() == 1)
+	    {
+	        $last_txn_date = date_format(date_create($rsltpayentry->row(0)->add_date),'Y-m-d H:i:s');
+	        $today_date = $this->common->getDate();
+	        
+	        $to_time = strtotime($today_date);
+            $from_time = strtotime($last_txn_date);
+            $diff =  round(abs($to_time - $from_time) / 60,2);
+            if($diff > 5)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }  
+	    }
+	    else
+	    {
+	        return false;
+	    }
+	}
+	
+	public function addBalance()
+	{
+		//http://www.palash.co.in /appapi1/fund_transfer/addBalance?username=200001&pwd=912436&OthersId=110003&amount=1&remark=test&txnpwd=2779&type=Wallet1
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+			$this->output->set_header("Pragma: no-cache"); 
+		//addBalance?username=&pwd=&OthersId=&amount=
+		if($_SERVER['REQUEST_METHOD'] == 'POST')
+		{
+			if(isset($_REQUEST['username']) && isset($_REQUEST['pwd']) && isset($_REQUEST['OthersId'])  && isset($_REQUEST['amount']))
+			{
+				$username = $_REQUEST['username'];
+				$pwd =  $_REQUEST['pwd'];
+				$othersId = $_REQUEST['OthersId'];
+				$amount = $_REQUEST['amount'];
+				$remark = $_REQUEST['remark'];
+			//	$txnpwd = $_REQUEST['txnpwd'];
+			}
+			else
+			{echo 'Paramenter is missing';exit;}			
+		}
+		else
+		{
+			if(isset($_GET['username']) && isset($_GET['pwd'])  && isset($_GET['OthersId'])  && isset($_GET['amount']))
+			{
+				$username = $_GET['username'];
+				$pwd =  $_GET['pwd'];
+				$othersId = $_GET['OthersId'];
+				$amount = $_GET['amount'];
+				$remark = $_GET['remark'];
+				$type = $_GET['type'];
+				
+				}
+			else
+			{echo 'Paramenter is missing';exit;}			
+		}	
+		if($amount < 0)
+		{
+			$resparray = array(
+		            "status"=>1,
+		            "message"=>"Invalid Amount"
+		        );
+		        echo json_encode($resparray);exit;
+		}
+		$host_id = $this->Common_methods->getHostId($this->white->getDomainName());
+		$userinfo = $this->db->query("select * from tblusers where username = ?  and password = ? and host_id = ?",array($username,$pwd,$host_id));
+		if($userinfo->num_rows() == 1)
+		{
+			//$hostname = $userinfo->row(0)->hostname;
+			$usertype_name = $userinfo->row(0)->usertype_name;
+			
+			if($usertype_name == "SuperDealer" or  $usertype_name == "MasterDealer" or $usertype_name == "Distributor" or $usertype_name == "FOS")
+			{
+				$cruserinfo = $this->db->query("select * from tblusers where username = ? and host_id = ?",array($othersId,$host_id));
+				if($cruserinfo->num_rows() == 1)
+				{
+					$cr_usertype = $cruserinfo->row(0)->usertype_name;
+					//$cr_hostname = $cruserinfo->row(0)->hostname;
+					if($cr_usertype == "Agent" or $cr_usertype == "FOS" or $cr_usertype == "Distributor" or $cr_usertype == "MasterDealer")
+					{
+						//if($hostname == $cr_hostname)
+						if(true)
+						{
+							
+							$dr_user_id = $userinfo->row(0)->user_id;
+							$cr_user_id = $cruserinfo->row(0)->user_id;
+							if($type == "Wallet2")
+							{
+								$response = $this->Ew2->DealerAddBalance($dr_user_id,$cr_user_id,$amount,$remark);
+								 $resparray = array(
+                		            "status"=>0,
+                		            "message"=>$response
+                    		        );
+                    		        echo json_encode($resparray);exit;	
+							}
+							else
+							{
+								
+								
+    							//if($this->checkduplicate($cr_user_id,$dr_user_id,$amount) == false)
+    							if(false)
+    							{
+    							    
+    							        $resparray = array(
+                    		            "status"=>1,
+                    		            "message"=>"Duplicate Payment Entry. Try After 5 Minutes"
+                        		        );
+                        		        echo json_encode($resparray);exit;	    
+    							    
+    							        
+    							}
+    							else
+    							{
+    							    if($this->payment_entry_locking_5_minutes($cr_user_id,$dr_user_id,$amount))
+    							    {
+    							        $resparray = array(
+                    		            "status"=>1,
+                    		            "message"=>"Duplicate Payment Entry. Try After 5 Minutes"
+                        		        );
+                        		        echo json_encode($resparray);exit;	 
+    							    }
+    							    else
+    							    {
+    							        $response = $this->Common_methods->DealerAddBalance($dr_user_id,$cr_user_id,$amount,$remark);
+        								$resparray = array(
+                        		            "status"=>0,
+                        		            "message"=>$response
+                            		        );
+                            		        echo json_encode($resparray);exit;	   
+    							    }
+    							     
+    							}
+							}
+							
+						}
+						
+					}
+					
+				}
+				else
+				{
+				    $resparray = array(
+		            "status"=>1,
+		            "message"=>"Invalid User 1"
+    		        );
+    		        echo json_encode($resparray);exit;
+				
+				}	
+			}
+			else if($usertype_name == "WLMasterDealer" or $usertype_name == "WLDistributor")
+			{
+				$cruserinfo = $this->db->query("select * from tblusers where username = ?",array($othersId));
+				if($cruserinfo->num_rows() == 1)
+				{
+					$cr_usertype = $cruserinfo->row(0)->usertype_name;
+					$cr_hostname = $cruserinfo->row(0)->hostname;
+					if($cr_usertype == "WLAgent" or $cr_usertype == "WLDistributor")
+					{
+						if($hostname == $cr_hostname)
+						{
+							$dr_user_id = $userinfo->row(0)->user_id;
+							$cr_user_id = $cruserinfo->row(0)->user_id;
+							$response = $this->Wlmethods->DealerAddBalance($dr_user_id,$cr_user_id,$amount,"");
+							$resparray = array(
+                				'Error'=>0,
+                				'Message'=>$response
+                				);
+				            echo json_encode($resparray);exit;
+				
+						}
+						
+					}
+					
+				}	
+				}
+				else
+				{
+				    $resparray = array(
+				'Error'=>1,
+				'Message'=>'Invalid User'
+				);
+				echo json_encode($resparray);exit;
+				}	
+			
+			
+		}
+		else
+		{
+		     $resparray = array(
+				'Error'=>1,
+				'Message'=>'Invalid Access'
+				);
+				echo json_encode($resparray);exit;
+			echo "Invalid Access";exit;
+		}
+		
+	}
+	public function revertBalance()
+	{
+	    error_reporting(-1);
+	    ini_set('display_errors',1);
+	    $this->db->db_debug = TRUE;
+	    $data = json_encode($this->input->get());
+	     $this->logentry($data);
+		//http://www.MPAY.IN/appapi1/revertBalance?username=&pwd=&OthersId=&amount=&remark=&type=
+		if($_SERVER['REQUEST_METHOD'] == 'POST')
+		{
+			if(isset($_REQUEST['username']) && isset($_REQUEST['pwd']) && isset($_REQUEST['OthersId'])  && isset($_REQUEST['amount']))
+			{
+				$username = $_REQUEST['username'];
+				$pwd =  $_REQUEST['pwd'];
+				$othersId = $_REQUEST['OthersId'];
+				$amount = $_REQUEST['amount'];
+				$remark = $_REQUEST['remark'];
+				$type = $_REQUEST['type'];
+			}
+			else
+			{echo 'Paramenter is missing';exit;}			
+		}
+		else
+		{
+			if(isset($_GET['username']) && isset($_GET['pwd'])  && isset($_GET['OthersId'])  && isset($_GET['amount']))
+			{
+				$username = $_GET['username'];
+				$pwd =  $_GET['pwd'];
+				$othersId = $_GET['OthersId'];
+				$amount = $_GET['amount'];
+				$remark = $_GET['remark'];
+				$type = $_GET['type'];
+				}
+			else
+			{echo 'Paramenter is missing';exit;}			
+		}
+		
+		
+		if($amount < 0)
+		{
+			echo "Invalid Amount";exit;
+		}
+		$host_id = 1;
+		$userinfo = $this->db->query("select * from tblusers where username = ? and password = ?",array($username,$pwd));
+		if($userinfo->num_rows() == 1)
+		{
+           
+			$usertype_name = $userinfo->row(0)->usertype_name;	
+			if($usertype_name == "SuperDealer" or $usertype_name == "MasterDealer" or $usertype_name == "Distributor" or $usertype_name == "FOS")
+			{
+				$druserinfo = $this->db->query("select * from tblusers where username = ? ",array($othersId));
+				if($druserinfo->num_rows() == 1)
+				{
+					$dr_usertype = $druserinfo->row(0)->usertype_name;
+					$dr_parentid = $druserinfo->row(0)->parentid;
+					if($dr_usertype == "Agent" or $dr_usertype == "Distributor" or $dr_usertype == "MasterDealer" or $dr_usertype == "FOS")
+					{
+						if(true)
+						{
+							$cr_user_id = $userinfo->row(0)->user_id;
+							$dr_user_id = $druserinfo->row(0)->user_id;
+							if($cr_user_id == $dr_parentid)
+							{
+							    
+							    
+							    if($type == "Wallet2")
+							    {
+							        $response = $this->Ew2->DealerRevertBalance($dr_user_id,$cr_user_id,$amount);
+								    $resparray = array(
+                		            "status"=>0,
+                		            "message"=>$response
+                    		        );
+                    		        echo json_encode($resparray);exit;
+							    }
+							    else
+							    {
+							        $response = $this->Common_methods->DealerRevertBalance($dr_user_id,$cr_user_id,$amount);
+								    $resparray = array(
+                		            "status"=>0,
+                		            "message"=>$response
+                    		        );
+                    		        echo json_encode($resparray);exit;
+							    }
+											
+							}
+							else
+							{
+							    	$resparray = array(
+                		            "status"=>1,
+                		            "message"=>"Invalid User"
+                    		        );
+                    		        echo json_encode($resparray);exit;
+							}
+						}
+						
+					}
+					else
+					{
+					    $resparray = array(
+                		            "status"=>1,
+                		            "message"=>"Invalid Access"
+                    		        );
+                    		        echo json_encode($resparray);exit;
+					}
+					
+				}
+				else
+				{
+					$resparray = array(
+		            "status"=>1,
+		            "message"=>"Invalid User"
+    		        );
+    		        echo json_encode($resparray);exit;
+				}	
+			}
+			else if($usertype_name == "WLMasterDealer" or $usertype_name == "WLDistributor")
+			{
+				$druserinfo = $this->db->query("select * from tblusers where username = ?",array($othersId));
+				if($druserinfo->num_rows() == 1)
+				{
+					$dr_usertype = $druserinfo->row(0)->usertype_name;
+					$dr_hostname = $druserinfo->row(0)->hostname;
+					$dr_parentid = $druserinfo->row(0)->parentid;
+					if($dr_usertype == "WLAgent" or $dr_usertype == "WLDistributor")
+					{
+						if($hostname == $dr_hostname)
+						{
+							$cr_user_id = $userinfo->row(0)->user_id;
+							$dr_user_id = $druserinfo->row(0)->user_id;
+							if($cr_user_id == $dr_parentid)
+							{
+								$response = $this->Wlmethods->DealerRevertBalance($dr_user_id,$cr_user_id,$amount,"");
+								$resparray = array(
+				'Error'=>0,
+				'Message'=>$response
+				);
+				echo json_encode($resparray);exit;
+										
+							}
+							
+						}
+						
+					}
+					
+				}
+				else
+				{
+					$resparray = array(
+				'Error'=>1,
+				'Message'=>'Invalid User'
+				);
+				echo json_encode($resparray);exit;
+				}	
+			}
+			else
+			{
+			    $resparray = array(
+		            "status"=>1,
+		            "message"=>"Invalid User"
+    		        );
+    		        echo json_encode($resparray);exit;
+			}
+			
+		}
+		else
+		{
+			$resparray = array(
+				'Error'=>1,
+				'Message'=>'Invalid Access'
+				);
+				echo json_encode($resparray);exit;
+		}
+		
+	}
+	
+}

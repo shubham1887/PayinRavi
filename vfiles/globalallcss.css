@@ -1,0 +1,26 @@
+﻿*{
+    box-sizing:border-box;
+}
+
+
+
+:root {
+    --main-bg-lcolor: #2473b4;
+    --main-bg-rcolor: #26ade8;
+    --border-color: #aaa4a4;
+    --second-bg-color: #eae9e9;
+    --nav-tab-bg: #a4a0a0;
+}
+
+.fullbodydycolorbg{
+    background-image:linear-gradient(to right , var(--main-bg-lcolor), var(--main-bg-rcolor)) !important;
+}
+.fulltextbodycolor{
+    -webkit-background-clip: text !important;
+    -moz-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+}
+.alagimgwithlinear {
+    background: url('../../ashok-images/03.png'), linear-gradient(to right,var(--main-bg-lcolor), var(--main-bg-rcolor));
+    
+}

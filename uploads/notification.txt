@@ -1,0 +1,48 @@
+Mobile Number : 8329949637
+
+  request url : https://fcm.googleapis.com/fcm/send 
+
+ Request Date : {"registration_ids":["fMmj8_aaKzs:APA91bEUS2VjMV41HxQT7ycdIFGhiCnwegNWjpmhfM4Q-ngsW0lf2m_sLpJ1mi2trPxLpbunQhKSn6iWjRdg0roFBbkhE6jqczUv540JAQJPq1y2kM_f8C7ipiYbuk7uigLjWundv5LI"],"priority":10,"data":{"username":"8329949637","title":"Recharge","body":"Recharge of Jio  Number : 9529251269  Amount : 15 is Success   Operator Id : BR0007N6FPBQ","sound":"Default","image":"Notification Image"}} 
+
+  Response : {"multicast_id":7531695699988544233,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"MismatchSenderId"}]}
+------------------------------------------------------------------------------------
+Mobile Number : 9987748216
+
+  request url : https://fcm.googleapis.com/fcm/send 
+
+ Request Date : {"registration_ids":["dS0vinKG8-c:APA91bGTW08DTAdIETTGON8nXfrQaiZp3swo0qMGii8paERsyf8pdKzHfKqimD1DYJkpMCf4ReiypPnB3_AcPTSBKp_nXXdelgHp7rkkXwTDCW9BFl7sKapRsC4aQMIF7Diiql1j9VY8"],"priority":10,"data":{"username":"9987748216","title":"Recharge","body":"Recharge of Airtel  Number : 9867173215  Amount : 10 is Success   Operator Id : \"147007360\"","sound":"Default","image":"Notification Image"}} 
+
+  Response : {"multicast_id":7297873206318655452,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"MismatchSenderId"}]}
+------------------------------------------------------------------------------------
+Mobile Number : 8329949637
+
+  request url : https://fcm.googleapis.com/fcm/send 
+
+ Request Date : {"registration_ids":["fMmj8_aaKzs:APA91bEUS2VjMV41HxQT7ycdIFGhiCnwegNWjpmhfM4Q-ngsW0lf2m_sLpJ1mi2trPxLpbunQhKSn6iWjRdg0roFBbkhE6jqczUv540JAQJPq1y2kM_f8C7ipiYbuk7uigLjWundv5LI"],"priority":10,"data":{"username":"8329949637","title":"Recharge","body":"Recharge of Jio  Number : 9529251269  Amount : 15 is Success   Operator Id : BR0007NHEJWN","sound":"Default","image":"Notification Image"}} 
+
+  Response : {"multicast_id":5870784242265246950,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"MismatchSenderId"}]}
+------------------------------------------------------------------------------------
+Mobile Number : 8080623623
+
+  request url : https://fcm.googleapis.com/fcm/send 
+
+ Request Date : {"registration_ids":["ePvxoQIfi-o:APA91bGfnGrBI1eTnImoWniIGYJICDZ4Soj0ZhfXNzA4lIl_63rrDoTEoI4PHZNjpli5j5uA74iD0yiWIcC-j6JbkBKnv4yCS3sEY52Ddk6pkrCR6PFl4eH4bH4DWEkyC-akaNowdClE"],"priority":10,"data":{"username":"8080623623","title":"Recharge","body":"Recharge of Airtel  Number : 9699623623  Amount : 99 is Success   Operator Id : null","sound":"Default","image":"Notification Image"}} 
+
+  Response : {"multicast_id":9041105831325774651,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"MismatchSenderId"}]}
+------------------------------------------------------------------------------------
+Mobile Number : 9284838350
+
+  request url : https://fcm.googleapis.com/fcm/send 
+
+ Request Date : {"registration_ids":["faErVaLI_QM:APA91bF_pKfISowvbEpgRl7oA3fNB-mDRCYxUrvhkKQlgoMSbN8ieCth4dyDRNM0AwFStDl-aoVQ-QR2GU4ANS83_1CvbVEfLWvs2IOaApGQ4qyl1sGwPUQKMpmql_4LbBHevYw24JlE"],"priority":10,"data":{"username":"9284838350","title":"Recharge","body":"Recharge of Jio  Number : 9284838350  Amount : 533 is Success   Operator Id : BR0007O7FAEO","sound":"Default","image":"Notification Image"}} 
+
+  Response : {"multicast_id":5736589247895151532,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"MismatchSenderId"}]}
+------------------------------------------------------------------------------------
+Mobile Number : 9987748216
+
+  request url : https://fcm.googleapis.com/fcm/send 
+
+ Request Date : {"registration_ids":["dS0vinKG8-c:APA91bGTW08DTAdIETTGON8nXfrQaiZp3swo0qMGii8paERsyf8pdKzHfKqimD1DYJkpMCf4ReiypPnB3_AcPTSBKp_nXXdelgHp7rkkXwTDCW9BFl7sKapRsC4aQMIF7Diiql1j9VY8"],"priority":10,"data":{"username":"9987748216","title":"Recharge","body":"Recharge of Airtel  Number : 9867173215  Amount : 10 is Success   Operator Id : 195009878","sound":"Default","image":"Notification Image"}} 
+
+  Response : {"multicast_id":4179289954601772707,"success":0,"failure":1,"canonical_ids":0,"results":[{"error":"MismatchSenderId"}]}
+------------------------------------------------------------------------------------

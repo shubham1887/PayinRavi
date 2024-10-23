@@ -1,0 +1,667 @@
+
+/*************************************
+ * generic styling for ALS elements
+ ************************************/
+
+.als-container {
+    position: relative;
+    /*width: 100%;*/
+    /*margin: 0px auto;*/
+    z-index: 0;
+    /*border-right:1px #000 solid;
+    border-top:1px #5a9edc solid;
+    border-left:1px #000 solid;*/
+}
+
+.als-viewport {
+    position: relative;
+    /*overflow: hidden;*/
+    margin: 0px auto;
+    margin: 0px 0px;
+    width: auto !important;
+    /*height: 35px !important;*/
+}
+
+.overfldiv {
+    /*min-width: 550px;*/
+    height: 415px !important;
+    /*border: #cdcdcd  1px solid;*/
+    overflow-y: scroll;
+}
+
+@media (min-width:1200px) and (max-width:1350px) {
+    .als-viewport {
+        position: relative;
+        overflow: hidden;
+        margin: 0px auto;
+        /*margin: 0px 30px;
+        width: 400px !important;*/
+    }
+
+    .overfldiv {
+        min-width: 350px;
+    }
+}
+
+@media (min-width:1000px) and (max-width:1190px) {
+    .als-viewport {
+        position: relative;
+        /*overflow: hidden;*/
+        /*margin: 0px auto;*/
+        margin: 0px 20px;
+        /*width: 405px !important;*/
+    }
+
+    .overfldiv {
+        /*width: 420px;*/
+        height: 400px;
+    }
+
+    .nav-tabs li a {
+        padding: 15px 10px;
+    }
+
+    .als-container {
+        position: relative;
+        width: 100%;
+        /*margin: 0px auto;*/
+        z-index: 0;
+        /*margin-left: 87px;*/
+    }
+}
+
+@media (min-width:768px) and (max-width:980px) {
+    .als-viewport {
+        position: relative;
+        /*overflow: hidden;*/
+        margin: 0px auto;
+        margin: 0px 0px;
+        /*width: 400px !important;*/
+    }
+
+    .overfldiv {
+        min-width: 350px;
+    }
+}
+
+@media (max-width:640px) {
+    .als-viewport {
+        position: relative;
+        /*overflow: hidden;*/
+        margin: 0px auto;
+        /*margin: 0px 20px;
+        width: 280px !important;*/
+    }
+
+    .overfldiv {
+        min-width: 300px;
+    }
+}
+
+.als-wrapper {
+    position: relative;
+    list-style: none;
+    margin: 6px 0px;
+    padding: 0px;
+    width: auto !important;
+    display: inline-block;
+}
+
+.als-item {
+    position: relative;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    float: left;
+}
+
+    .als-item.active a {
+        border: 1px solid rgb(236, 50, 55);
+        line-height: 17px;
+        border-radius: 2px;
+        color: #fff;
+        background: #dc1c1c;
+    }
+
+.als-prev, .als-next {
+    position: absolute;
+    cursor: pointer;
+    clear: both;
+}
+/*************************************
+ * specific styling for #demo4
+ ************************************/
+
+#demo4 {
+    /* margin: 40px auto; */
+    position: relative;
+    /*border-top: 2px solid #666;*/
+}
+
+@media (max-width:980px) {
+    #demo4 {
+        margin-top: 20px;
+    }
+}
+
+#demo4 .als-item {
+    /*margin: 0px 1px;*/
+    padding: 5px 5px;
+    min-width: 100%;
+    /*text-align: center;*/
+    /*background:#fff;*/
+    vertical-align: middle;
+    /*font-family:'Roboto', sans-serif;*/
+    /*color:#000 !important;*/
+    /*border:1px solid #5a9edc;*/
+    font-size: 13.5px;
+    /*font-family:Verdana;*/
+    /*border-right: 1px solid #666;*/
+    /*font-weight:bold !important;*/
+    float: left;
+    text-align: left;
+}
+
+    #demo4 .als-item a {
+        color: #333;
+        font-family: Verdana;
+        font-size: 12px;
+    }
+
+    #demo4 .als-item:hover {
+        /*margin: 0px 1px;*/
+        /*padding: 14px 5px;
+	min-width: 100px;
+	text-align: center;
+    background:#f1f1f1;
+     color:#333;
+    vertical-align: middle;*/
+        /*border-right:1px solid #5a9edc;*/
+    }
+
+
+    #demo4 .als-item img {
+        display: block;
+        margin: 0 auto;
+    }
+
+#demo4 .als-prev, #demo4 .als-next {
+    top: 10px;
+}
+
+#demo4 .als-prev {
+    left: 0px;
+}
+
+#demo4 .als-next {
+    right: 0px;
+}
+
+.amt {
+    color: #ec3237;
+    border-radius: 4px;
+    padding: 0px 0px;
+    font-size: 26px;
+}
+
+.select {
+    font-family: Verdana;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.plan {
+    /*border:2px #4682b4 dotted;height:80px;border-radius:5px;*/
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+    .plan:hover {
+        background: #fbfbfb;
+    }
+
+.selectplan, .selectplan:hover {
+    /*border: 2px #4682b4 solid;
+    height: 80px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #5bb75b;
+    color: #fff;
+    margin-bottom: 5px;*/
+}
+
+    .selectplan, .selectplan:hover td {
+        background: #fff5f5 !important;
+    }
+
+        .selectplan .amt {
+            color: #ec3237;
+            border-radius: 4px;
+            padding: 0px 5px;
+            font-size: 36px;
+        }
+
+.btnprice {
+    border: 1px solid #dc3232;
+    padding: 2px 12px;
+    display: inline-block;
+    border-radius: 4px;
+    color: #dc3232 !important;
+    width: 75px;
+    text-align: center;
+}
+
+.tableplan > tbody > tr > td, .tableplan > tfoot > tr > td, .tableplan > thead > tr > td {
+    padding: 7px 15px;
+}
+
+#MyPlansModel .form-control {
+    background: #fff;
+    border-radius: 4px !important;
+    padding: 0px 6px;
+}
+
+#demo4 .als-item .fa {
+    float: right;
+    margin-right: 0px;
+    font-size: 15px;
+}
+
+.btnprice {
+    border: 1px solid #dc3232;
+    padding: 2px 2px;
+    display: inline-block;
+    border-radius: 4px;
+    color: #dc3232 !important;
+    width: 62px;
+    text-align: center;
+}
+
+.tableplan th, .table td {
+    padding: 8px 10px;
+    vertical-align: middle;
+    border-top: 1px dashed #dee2e6;
+}
+
+.tableplan td {
+    white-space: initial;
+    font-size: 12px;
+}
+
+.tableplan thead th {
+    background: #fff;
+    border-top: 0px;
+}
+
+.plans-heading {
+    background: #f9f9f9;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #d6d5d5;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    /*background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);*/
+    background: #fff;
+    overflow-x: hidden;
+    transition: 0.3s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 18%;
+    width: 100%;
+    /*text-align: center;*/
+    margin-top: 0px;
+    left: 230px;
+    /*font-weight: 600;*/
+}
+
+.overlay .closebtn {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.5s;
+}
+
+    .overlay .closebtn:hover, .overlay .closebtn:focus {
+        color: #f1f1f1;
+    }
+
+.overlay .closebtn {
+    position: absolute;
+    top: 50px;
+    right: 5px;
+    font-size: 40px;
+}
+
+@media (max-width:853px) {
+    .overlay-content {
+        left: 25px;
+        top: 90px;
+    }
+
+    #demo4 .als-item .fa {
+        /*display: none;*/
+    }
+}
+
+@media (min-width:900px) and (max-width:1023px) {
+    .overlay-content {
+        left: 50px;
+        top: 9%;
+    }
+
+    #demo4 .als-item .fa {
+        display: block;
+    }
+}
+
+@media (min-width:1025px) and (max-width:1365px) {
+    .overlay-content {
+        top: 10%;
+    }
+}
+
+/*@media screen and (max-height: 800px) {
+    .overlay .closebtn {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 30px;
+        top: 30px;
+        right: 5px;
+    }
+}*/
+
+/* scrollbar */
+
+.overfldiv {
+    display: block;
+    border: #ddd 1px solid;
+    border-top: 0px;
+    min-height: 375px;
+    height: 428px;
+    overflow: auto;
+    margin-top: 0px;
+}
+
+    .overfldiv::-webkit-scrollbar {
+        width: 5px;
+        height: 8px;
+        background-color: #ddd; /* or add it to the track */
+    }
+
+    /* Add a thumb */
+    .overfldiv::-webkit-scrollbar-thumb {
+        background: #999;
+    }
+
+@media (max-width:854px) {
+    .overlay-content {
+        left: 50px;
+    }
+
+    .overlay .closebtn {
+        font-size: 30px;
+        top: 35px;
+        right: 5px;
+    }
+}
+
+@media (max-width:568px) {
+    .overlay-content {
+        left: 0px;
+    }
+
+    #allplans h3 {
+        font-size: 20px;
+    }
+}
+
+@media (min-width:1024px) and (max-width:1300px) {
+    .overlay-content {
+        top: 100px;
+        width: 75%;
+        left: 25%;
+    }
+
+    .overlay .closebtn {
+        font-size: 30px;
+        top: 45px;
+        right: 25px;
+    }
+}
+
+@media (min-width:1365px) {
+    .overlay-content {
+        top: 100px;
+    }
+
+    .overlay .closebtn {
+        right: 25px;
+    }
+}
+
+.td-validity {
+    width: 85px !important;
+}
+
+.td-Description {
+}
+
+.tableplan thead td {
+    font-weight: 600;
+}
+
+.tabs-menu ul li a {
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+@media (max-width:612px) {
+    .sidebarRecharge {
+        width: 310px;
+    }
+
+    .btnprice {
+        padding: 2px 3px !important;
+        width: 56px !important;
+    }
+
+    .tableplan > tbody > tr > td, .tableplan > tfoot > tr > td, .tableplan > thead > tr > td {
+        padding: 7px 5px;
+    }
+
+    .tableplan th, .table td {
+        padding: 5px 5px !important;
+    }
+
+    .td-validity {
+        width: 70px !important;
+    }
+
+    .td-Description {
+        width: 130px !important;
+    }
+
+    .tabs-menu ul li a {
+        padding: 5px 7px;
+        font-size: 12px;
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+
+    .tableplan td {
+        white-space: initial;
+        font-size: 10px;
+        line-height: 17px;
+    }
+}
+
+
+/*******right plan model********/
+
+.modal.left .modal-dialog,
+.modal.right .modal-dialog {
+    position: fixed;
+    margin: auto;
+    width: 320px;
+    height: 100%;
+    -webkit-transform: translate3d(0%, 0, 0);
+    -ms-transform: translate3d(0%, 0, 0);
+    -o-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);
+}
+
+.modal.left .modal-content,
+.modal.right .modal-content {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.modal.left .modal-body,
+.modal.right .modal-body {
+    padding: 0px;
+}
+
+/*Left*/
+.modal.left.fade .modal-dialog {
+    left: -320px;
+    -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+    transition: opacity 0.3s linear, left 0.3s ease-out;
+}
+
+.modal.left.fade.in .modal-dialog {
+    left: 0;
+}
+
+/*Right*/
+.modal.right.fade .modal-dialog {
+    right: 0px;
+    -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+    transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.modal.right.fade.in .modal-dialog {
+    right: 0;
+}
+
+/* ----- MODAL STYLE ----- */
+.modal-content {
+    border-radius: 0;
+    border: none;
+}
+
+.modal-header {
+    border-bottom-color: #EEEEEE;
+    background-color: #FAFAFA;
+}
+
+ul.cust_details {
+    display: inline-block;
+    float: right;
+}
+
+    ul.cust_details li {
+        list-style-type: none;
+        float: left;
+        padding: 5px;
+    }
+
+        ul.cust_details li b {
+            font-weight: 700;
+        }
+
+.btn-addbene {
+    padding: 4px 8px;
+    background: #ec3237;
+    margin-bottom: 10px;
+    display: inline-block;
+    border-radius: 12px;
+    color: #fff;
+}
+
+    .btn-addbene:hover {
+        color: #fff;
+    }
+
+.paytd td, .paytd th {
+    border: 0px solid #dedede;
+}
+
+.btnhist {
+    border-radius: 3px;
+    padding: 1px 6px;
+    float: right;
+    background: #fff;
+}
+
+/*********Recharge Plans************/
+
+.sidebar .tabs-menu ul li a {
+    margin: 3px 0px 3px 6px;
+}
+
+.sidebar .tab-menu-heading {
+    padding: 10px !important;
+    text-align: center;
+    padding-bottom: 0px !important;
+}
+
+    .sidebar .tab-menu-heading .tabs-menu {
+        display: inline-block;
+    }
+
+.tabs-menu ul li a {
+    padding: 5px 5px;
+    margin: 3px 0px 0px 3px;
+    display: block;
+    border: 1px solid rgb(236, 50, 55);
+    line-height: 17px;
+    border-radius: 2px;
+    color: #dc1c1c;
+}
+
+.sidebarRecharge {
+    width: 586px !important;
+    max-width: 586px !important;
+}
+    .sidebarRecharge .close{
+        color:#333;
+    }
+    .sidebarRecharge .modal-header {
+        padding: 15px;
+    }
+
+    .tableDth td b {
+        font-weight: 600;
+    }
+
+.tableDth td {
+    white-space: normal;
+    font-size: 12px;
+    padding: 8px 8px !important;
+}
+
+.custtable td {
+    white-space: normal;
+}
+
+    .custtable td b {
+        font-weight: 600;
+    }

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>alertify.js - example page</title>
+	<link rel="stylesheet" href="../themes/alertify.core.css" />
+	<link rel="stylesheet" href="../themes/alertify.default.css" id="toggleCSS" />
+	<meta name="viewport" content="width=device-width">
+	<style>
+		.alertify-log-custom {
+			background: blue;
+		}
+	</style>
+</head>
+<body>
+
+	<a href="#" id="prompt">Prompt Dialog</a><br>
+	
+
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="../lib/alertify.min.js"></script>
+	<script>
+		function reset () {
+			$("#toggleCSS").attr("href", "../themes/alertify.default.css");
+			alertify.set({
+				labels : {
+					ok     : "OK",
+					cancel : "Cancel"
+				},
+				delay : 5000,
+				buttonReverse : false,
+				buttonFocus   : "ok"
+			});
+		}
+
+		// ==============================
+		// Standard Dialogs
+		$("#alert").on( 'click', function () {
+			reset();
+			alertify.alert("This is an alert dialog");
+			return false;
+		});
+
+		$("#confirm").on( 'click', function () {
+			reset();
+			alertify.confirm("This is a confirm dialog", function (e) {
+				if (e) {
+					alertify.success("You've clicked OK");
+				} else {
+					alertify.error("You've clicked Cancel");
+				}
+			});
+			return false;
+		});
+
+		$("#prompt").on( 'click', function () {
+			reset();
+			alertify.prompt("This is a prompt dialog", function (e, str) {
+				if (e) {
+					alertify.success("You've clicked OK and typed: " + str);
+				} else {
+					alertify.error("You've clicked Cancel");
+				}
+			}, "Default Value");
+			return false;
+		});
+
+		
+	</script>
+
+</body>
+</html>
